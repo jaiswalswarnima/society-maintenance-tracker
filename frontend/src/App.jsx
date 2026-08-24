@@ -53,9 +53,7 @@ const initialRecords = [
 ];
 
 function App() {
-  const [token, setToken] = useState(
-    localStorage.getItem("access_token")
-  );
+  const [token, setToken] = useState(null);
 
   const [user, setUser] = useState(() => {
     try {
