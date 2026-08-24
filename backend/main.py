@@ -1,6 +1,5 @@
 import os
 from datetime import date, datetime, timedelta
-from fastapi.middleware.cors import CORSMiddleware
 
 from fastapi import (
     Depends,
@@ -12,6 +11,7 @@ from fastapi import (
     Query,
     UploadFile,
 )
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from sqlalchemy.orm import Session
 
@@ -22,18 +22,12 @@ from auth import (
     verify_password,
 )
 from database import Base, engine, get_db
-from models import (
-    Complaint,
-    ComplaintStatusHistory,
-    User,
-)
+from models import Complaint, ComplaintStatusHistory, User
 from schemas import (
-    ComplaintHistoryResponse,
-    ComplaintResponse,
-    ComplaintUpdateRequest,
     LoginRequest,
     RegisterRequest,
     UserResponse,
+    ComplaintUpdateRequest,
 )
 
 
@@ -56,6 +50,23 @@ app = FastAPI(
 
 
 # ============================================================
+# CORS
+# ============================================================
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "https://society-maintenance-tracker-1-3q69.onrender.com",
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+
+# ============================================================
 # UPLOAD DIRECTORY
 # ============================================================
 
@@ -74,9 +85,7 @@ app.mount(
 # CONFIGURATION
 # ============================================================
 
-OVERDUE_DAYS = int(
-    os.getenv("OVERDUE_DAYS", "3")
-)
+OVERDUE_DAYS = int(os.getenv("OVERDUE_DAYS", "3"))
 
 
 # ============================================================
@@ -98,7 +107,7 @@ def health():
 
 
 # ============================================================
-# AUTHENTICATION HELPERS
+# AUTHENTICATION
 # ============================================================
 
 def get_current_user(
@@ -127,9 +136,11 @@ def get_current_user(
             detail="Invalid or expired token",
         )
 
-    user = db.query(User).filter(
-        User.id == token_data["user_id"]
-    ).first()
+    user = (
+        db.query(User)
+        .filter(User.id == token_data["user_id"])
+        .first()
+    )
 
     if not user:
         raise HTTPException(
@@ -165,7 +176,7 @@ def require_resident(
 
 
 # ============================================================
-# HELPER — OVERDUE
+# OVERDUE HELPER
 # ============================================================
 
 def is_complaint_overdue(complaint: Complaint) -> bool:
@@ -191,9 +202,11 @@ def register(
     data: RegisterRequest,
     db: Session = Depends(get_db),
 ):
-    existing_user = db.query(User).filter(
-        User.email == data.email
-    ).first()
+    existing_user = (
+        db.query(User)
+        .filter(User.email == data.email)
+        .first()
+    )
 
     if existing_user:
         raise HTTPException(
@@ -224,9 +237,11 @@ def login(
     data: LoginRequest,
     db: Session = Depends(get_db),
 ):
-    user = db.query(User).filter(
-        User.email == data.email
-    ).first()
+    user = (
+        db.query(User)
+        .filter(User.email == data.email)
+        .first()
+    )
 
     if not user:
         raise HTTPException(
@@ -275,7 +290,7 @@ def get_me(
 
 
 # ============================================================
-# ROLE TEST ROUTES
+# TEST ROUTES
 # ============================================================
 
 @app.get("/resident/test")
@@ -307,7 +322,7 @@ async def create_complaint(
     category: str = Form(...),
     description: str = Form(...),
     photo: UploadFile | None = File(default=None),
-    current_user: User = Depends(require_resident),
+    current_user: User = Depends(get_current_user),
     db: Session = Depends(get_db),
 ):
     if not category.strip():
@@ -323,10 +338,6 @@ async def create_complaint(
         )
 
     photo_url = None
-
-    # --------------------------------------------------------
-    # PHOTO UPLOAD
-    # --------------------------------------------------------
 
     if photo is not None:
         allowed_types = {
@@ -369,10 +380,6 @@ async def create_complaint(
 
         photo_url = f"/uploads/{filename}"
 
-    # --------------------------------------------------------
-    # CREATE COMPLAINT
-    # --------------------------------------------------------
-
     complaint = Complaint(
         resident_id=current_user.id,
         category=category.strip(),
@@ -385,10 +392,6 @@ async def create_complaint(
     db.add(complaint)
     db.commit()
     db.refresh(complaint)
-
-    # --------------------------------------------------------
-    # INITIAL STATUS HISTORY
-    # --------------------------------------------------------
 
     history = ComplaintStatusHistory(
         complaint_id=complaint.id,
@@ -417,7 +420,7 @@ async def create_complaint(
 
 
 # ============================================================
-# RESIDENT — VIEW OWN COMPLAINTS
+# RESIDENT — OWN COMPLAINTS
 # ============================================================
 
 @app.get("/complaints/my")
@@ -439,22 +442,26 @@ def get_my_complaints(
     result = []
 
     for complaint in complaints:
-        result.append({
-            "id": complaint.id,
-            "category": complaint.category,
-            "description": complaint.description,
-            "photo_url": complaint.photo_url,
-            "priority": complaint.priority,
-            "status": complaint.status,
-            "created_at": complaint.created_at,
-            "overdue": is_complaint_overdue(complaint),
-        })
+        result.append(
+            {
+                "id": complaint.id,
+                "category": complaint.category,
+                "description": complaint.description,
+                "photo_url": complaint.photo_url,
+                "priority": complaint.priority,
+                "status": complaint.status,
+                "created_at": complaint.created_at,
+                "overdue": is_complaint_overdue(
+                    complaint
+                ),
+            }
+        )
 
     return result
 
 
 # ============================================================
-# RESIDENT — VIEW SINGLE COMPLAINT
+# SINGLE COMPLAINT
 # ============================================================
 
 @app.get("/complaints/{complaint_id}")
@@ -463,9 +470,11 @@ def get_complaint(
     current_user: User = Depends(get_current_user),
     db: Session = Depends(get_db),
 ):
-    complaint = db.query(Complaint).filter(
-        Complaint.id == complaint_id
-    ).first()
+    complaint = (
+        db.query(Complaint)
+        .filter(Complaint.id == complaint_id)
+        .first()
+    )
 
     if not complaint:
         raise HTTPException(
@@ -473,7 +482,6 @@ def get_complaint(
             detail="Complaint not found",
         )
 
-    # Resident can only see own complaint
     if (
         current_user.role == "resident"
         and complaint.resident_id != current_user.id
@@ -517,47 +525,30 @@ def get_complaint(
         ],
     }
 
+
 # ============================================================
-# ADMIN — VIEW ALL COMPLAINTS WITH FILTERS
+# ADMIN — ALL COMPLAINTS
 # ============================================================
 
 @app.get("/admin/complaints")
 def get_all_complaints(
-    category: str | None = Query(
-        default=None
-    ),
-    status: str | None = Query(
-        default=None
-    ),
-    complaint_date: date | None = Query(
-        default=None
-    ),
+    category: str | None = Query(default=None),
+    status: str | None = Query(default=None),
+    complaint_date: date | None = Query(default=None),
     current_user: User = Depends(require_admin),
     db: Session = Depends(get_db),
 ):
     query = db.query(Complaint)
-
-    # --------------------------------------------------------
-    # CATEGORY FILTER
-    # --------------------------------------------------------
 
     if category:
         query = query.filter(
             Complaint.category == category
         )
 
-    # --------------------------------------------------------
-    # STATUS FILTER
-    # --------------------------------------------------------
-
     if status:
         query = query.filter(
             Complaint.status == status
         )
-
-    # --------------------------------------------------------
-    # DATE FILTER
-    # --------------------------------------------------------
 
     if complaint_date:
         start_datetime = datetime.combine(
@@ -580,10 +571,6 @@ def get_all_complaints(
         .all()
     )
 
-    # --------------------------------------------------------
-    # OVERDUE FIRST
-    # --------------------------------------------------------
-
     complaints.sort(
         key=lambda complaint: (
             not is_complaint_overdue(complaint),
@@ -594,19 +581,31 @@ def get_all_complaints(
     result = []
 
     for complaint in complaints:
-        result.append({
-            "id": complaint.id,
-            "resident_id": complaint.resident_id,
-            "category": complaint.category,
-            "description": complaint.description,
-            "photo_url": complaint.photo_url,
-            "priority": complaint.priority,
-            "status": complaint.status,
-            "created_at": complaint.created_at,
-            "overdue": is_complaint_overdue(
-                complaint
-            ),
-        })
+        resident = (
+            db.query(User)
+            .filter(User.id == complaint.resident_id)
+            .first()
+        )
+
+        result.append(
+            {
+                "id": complaint.id,
+                "resident_id": complaint.resident_id,
+                "resident": resident.name if resident else None,
+                "user_name": resident.name if resident else None,
+                "flat": None,
+                "flat_number": None,
+                "category": complaint.category,
+                "description": complaint.description,
+                "photo_url": complaint.photo_url,
+                "priority": complaint.priority,
+                "status": complaint.status,
+                "created_at": complaint.created_at,
+                "overdue": is_complaint_overdue(
+                    complaint
+                ),
+            }
+        )
 
     return result
 
@@ -622,19 +621,17 @@ def update_complaint(
     current_user: User = Depends(require_admin),
     db: Session = Depends(get_db),
 ):
-    complaint = db.query(Complaint).filter(
-        Complaint.id == complaint_id
-    ).first()
+    complaint = (
+        db.query(Complaint)
+        .filter(Complaint.id == complaint_id)
+        .first()
+    )
 
     if not complaint:
         raise HTTPException(
             status_code=404,
             detail="Complaint not found",
         )
-
-    # --------------------------------------------------------
-    # VALID STATUS VALUES
-    # --------------------------------------------------------
 
     allowed_statuses = {
         "Open",
@@ -648,12 +645,7 @@ def update_complaint(
         "High",
     }
 
-    # --------------------------------------------------------
-    # STATUS VALIDATION
-    # --------------------------------------------------------
-
     if data.status is not None:
-
         if data.status not in allowed_statuses:
             raise HTTPException(
                 status_code=400,
@@ -663,7 +655,6 @@ def update_complaint(
                 ),
             )
 
-        # Once resolved, complaint is closed
         if (
             complaint.status == "Resolved"
             and data.status != "Resolved"
@@ -671,23 +662,16 @@ def update_complaint(
             raise HTTPException(
                 status_code=400,
                 detail=(
-                    "Resolved complaints cannot "
-                    "be reopened"
+                    "Resolved complaints cannot be reopened"
                 ),
             )
 
-    # --------------------------------------------------------
-    # PRIORITY VALIDATION
-    # --------------------------------------------------------
-
     if data.priority is not None:
-
         if data.priority not in allowed_priorities:
             raise HTTPException(
                 status_code=400,
                 detail=(
-                    "Priority must be Low, "
-                    "Medium, or High"
+                    "Priority must be Low, Medium, or High"
                 ),
             )
 
@@ -698,28 +682,15 @@ def update_complaint(
         and data.status != old_status
     )
 
-    # --------------------------------------------------------
-    # UPDATE PRIORITY
-    # --------------------------------------------------------
-
     if data.priority is not None:
         complaint.priority = data.priority
-
-    # --------------------------------------------------------
-    # UPDATE STATUS
-    # --------------------------------------------------------
 
     if data.status is not None:
         complaint.status = data.status
 
     db.add(complaint)
 
-    # --------------------------------------------------------
-    # RECORD STATUS HISTORY
-    # --------------------------------------------------------
-
     if status_changed:
-
         history = ComplaintStatusHistory(
             complaint_id=complaint.id,
             old_status=old_status,
@@ -749,4 +720,3 @@ def update_complaint(
         },
         "status_changed": status_changed,
     }
-    
