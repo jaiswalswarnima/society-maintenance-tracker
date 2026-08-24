@@ -1,7 +1,7 @@
-import { useEffect, useMemo, useState } from "react";
+﻿import { useEffect, useMemo, useState } from "react";
 import "./index.css";
 
-const API = "http://127.0.0.1:8000";
+const API = "https://society-maintenance-tracker-28xu.onrender.com";
 
 const initialRecords = [
   {
@@ -416,7 +416,7 @@ function App() {
       <div className="login-page">
         <div className="login-card">
           <div className="login-logo">
-            🏢
+            ðŸ¢
           </div>
 
           <h1>SocietyTrack</h1>
@@ -482,7 +482,7 @@ function App() {
       <aside className="sidebar">
         <div className="brand">
           <div className="brand-icon">
-            🏢
+            ðŸ¢
           </div>
 
           <div>
@@ -495,11 +495,11 @@ function App() {
 
         <nav className="nav">
           {[
-            ["Dashboard", "⌂"],
-            ["Maintenance", "₹"],
-            ["Complaints", "⚠"],
-            ["Residents", "👥"],
-            ["Reports", "▥"],
+            ["Dashboard", "âŒ‚"],
+            ["Maintenance", "â‚¹"],
+            ["Complaints", "âš "],
+            ["Residents", "ðŸ‘¥"],
+            ["Reports", "â–¥"],
           ].map(([name, icon]) => (
             <button
               key={name}
@@ -532,7 +532,7 @@ function App() {
             className="logout"
             onClick={logout}
           >
-            ↪ Logout
+            â†ª Logout
           </button>
         </div>
       </aside>
@@ -578,7 +578,7 @@ function App() {
             <section className="summary-grid">
               <div className="summary-card">
                 <div className="card-icon blue">
-                  🏢
+                  ðŸ¢
                 </div>
 
                 <div>
@@ -592,7 +592,7 @@ function App() {
 
               <div className="summary-card">
                 <div className="card-icon green">
-                  ✓
+                  âœ“
                 </div>
 
                 <div>
@@ -606,7 +606,7 @@ function App() {
 
               <div className="summary-card">
                 <div className="card-icon orange">
-                  ◷
+                  â—·
                 </div>
 
                 <div>
@@ -658,7 +658,7 @@ function App() {
 
               <div className="filters">
                 <div className="search-box">
-                  🔍
+                  ðŸ”
 
                   <input
                     placeholder="Search flat or owner..."
@@ -740,7 +740,7 @@ function App() {
                           </td>
 
                           <td>
-                            ₹
+                            â‚¹
                             {record.amount.toLocaleString(
                               "en-IN"
                             )}
@@ -773,7 +773,7 @@ function App() {
                               </button>
                             ) : (
                               <span className="completed">
-                                ✓ Completed
+                                âœ“ Completed
                               </span>
                             )}
                           </td>
@@ -791,7 +791,7 @@ function App() {
                   Total Expected
                 </span>
                 <strong>
-                  ₹
+                  â‚¹
                   {totalExpected.toLocaleString(
                     "en-IN"
                   )}
@@ -806,7 +806,7 @@ function App() {
                   Total Collected
                 </span>
                 <strong>
-                  ₹
+                  â‚¹
                   {totalCollected.toLocaleString(
                     "en-IN"
                   )}
@@ -821,7 +821,7 @@ function App() {
                   Outstanding
                 </span>
                 <strong>
-                  ₹
+                  â‚¹
                   {outstanding.toLocaleString(
                     "en-IN"
                   )}
@@ -860,7 +860,7 @@ function App() {
             <div className="feature-grid">
               <div>
                 <strong>
-                  ₹
+                  â‚¹
                   {totalCollected.toLocaleString(
                     "en-IN"
                   )}
@@ -872,7 +872,7 @@ function App() {
 
               <div>
                 <strong>
-                  ₹
+                  â‚¹
                   {outstanding.toLocaleString(
                     "en-IN"
                   )}
@@ -1029,7 +1029,7 @@ function App() {
                               ).toLowerCase() ===
                               "resolved" ? (
                                 <span className="completed">
-                                  ✓ Resolved
+                                  âœ“ Resolved
                                 </span>
                               ) : (
                                 <button
@@ -1127,7 +1127,7 @@ function App() {
                   Total Expected
                 </span>
                 <strong>
-                  ₹
+                  â‚¹
                   {totalExpected.toLocaleString(
                     "en-IN"
                   )}
@@ -1139,7 +1139,7 @@ function App() {
                   Total Collected
                 </span>
                 <strong>
-                  ₹
+                  â‚¹
                   {totalCollected.toLocaleString(
                     "en-IN"
                   )}
@@ -1151,7 +1151,7 @@ function App() {
                   Outstanding
                 </span>
                 <strong>
-                  ₹
+                  â‚¹
                   {outstanding.toLocaleString(
                     "en-IN"
                   )}
@@ -1209,7 +1209,7 @@ function App() {
                   setShowPaymentForm(false)
                 }
               >
-                ×
+                Ã—
               </button>
             </div>
 
@@ -1315,7 +1315,7 @@ function App() {
                   setShowComplaintForm(false)
                 }
               >
-                ×
+                Ã—
               </button>
             </div>
 
