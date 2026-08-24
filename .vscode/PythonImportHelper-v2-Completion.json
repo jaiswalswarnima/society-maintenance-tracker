@@ -1,0 +1,2480 @@
+[
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timezone",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "date",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "date",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "date",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "date",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "date",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "JWTError",
+        "importPath": "jose",
+        "description": "jose",
+        "isExtraImport": true,
+        "detail": "jose",
+        "documentation": {}
+    },
+    {
+        "label": "jwt",
+        "importPath": "jose",
+        "description": "jose",
+        "isExtraImport": true,
+        "detail": "jose",
+        "documentation": {}
+    },
+    {
+        "label": "CryptContext",
+        "importPath": "passlib.context",
+        "description": "passlib.context",
+        "isExtraImport": true,
+        "detail": "passlib.context",
+        "documentation": {}
+    },
+    {
+        "label": "create_engine",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Boolean",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Column",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "DateTime",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "ForeignKey",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Integer",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "String",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Text",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "declarative_base",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "sessionmaker",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "relationship",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "CORSMiddleware",
+        "importPath": "fastapi.middleware.cors",
+        "description": "fastapi.middleware.cors",
+        "isExtraImport": true,
+        "detail": "fastapi.middleware.cors",
+        "documentation": {}
+    },
+    {
+        "label": "CORSMiddleware",
+        "importPath": "fastapi.middleware.cors",
+        "description": "fastapi.middleware.cors",
+        "isExtraImport": true,
+        "detail": "fastapi.middleware.cors",
+        "documentation": {}
+    },
+    {
+        "label": "CORSMiddleware",
+        "importPath": "fastapi.middleware.cors",
+        "description": "fastapi.middleware.cors",
+        "isExtraImport": true,
+        "detail": "fastapi.middleware.cors",
+        "documentation": {}
+    },
+    {
+        "label": "CORSMiddleware",
+        "importPath": "fastapi.middleware.cors",
+        "description": "fastapi.middleware.cors",
+        "isExtraImport": true,
+        "detail": "fastapi.middleware.cors",
+        "documentation": {}
+    },
+    {
+        "label": "CORSMiddleware",
+        "importPath": "fastapi.middleware.cors",
+        "description": "fastapi.middleware.cors",
+        "isExtraImport": true,
+        "detail": "fastapi.middleware.cors",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "File",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Form",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Header",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Query",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "UploadFile",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "File",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Form",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Header",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Query",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "UploadFile",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "File",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Form",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Header",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Query",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "UploadFile",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "File",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Form",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Header",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Query",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "UploadFile",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "File",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Form",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Header",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Query",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "UploadFile",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "StaticFiles",
+        "importPath": "fastapi.staticfiles",
+        "description": "fastapi.staticfiles",
+        "isExtraImport": true,
+        "detail": "fastapi.staticfiles",
+        "documentation": {}
+    },
+    {
+        "label": "StaticFiles",
+        "importPath": "fastapi.staticfiles",
+        "description": "fastapi.staticfiles",
+        "isExtraImport": true,
+        "detail": "fastapi.staticfiles",
+        "documentation": {}
+    },
+    {
+        "label": "StaticFiles",
+        "importPath": "fastapi.staticfiles",
+        "description": "fastapi.staticfiles",
+        "isExtraImport": true,
+        "detail": "fastapi.staticfiles",
+        "documentation": {}
+    },
+    {
+        "label": "StaticFiles",
+        "importPath": "fastapi.staticfiles",
+        "description": "fastapi.staticfiles",
+        "isExtraImport": true,
+        "detail": "fastapi.staticfiles",
+        "documentation": {}
+    },
+    {
+        "label": "StaticFiles",
+        "importPath": "fastapi.staticfiles",
+        "description": "fastapi.staticfiles",
+        "isExtraImport": true,
+        "detail": "fastapi.staticfiles",
+        "documentation": {}
+    },
+    {
+        "label": "create_access_token",
+        "importPath": "auth",
+        "description": "auth",
+        "isExtraImport": true,
+        "detail": "auth",
+        "documentation": {}
+    },
+    {
+        "label": "decode_access_token",
+        "importPath": "auth",
+        "description": "auth",
+        "isExtraImport": true,
+        "detail": "auth",
+        "documentation": {}
+    },
+    {
+        "label": "hash_password",
+        "importPath": "auth",
+        "description": "auth",
+        "isExtraImport": true,
+        "detail": "auth",
+        "documentation": {}
+    },
+    {
+        "label": "verify_password",
+        "importPath": "auth",
+        "description": "auth",
+        "isExtraImport": true,
+        "detail": "auth",
+        "documentation": {}
+    },
+    {
+        "label": "create_access_token",
+        "importPath": "auth",
+        "description": "auth",
+        "isExtraImport": true,
+        "detail": "auth",
+        "documentation": {}
+    },
+    {
+        "label": "decode_access_token",
+        "importPath": "auth",
+        "description": "auth",
+        "isExtraImport": true,
+        "detail": "auth",
+        "documentation": {}
+    },
+    {
+        "label": "hash_password",
+        "importPath": "auth",
+        "description": "auth",
+        "isExtraImport": true,
+        "detail": "auth",
+        "documentation": {}
+    },
+    {
+        "label": "verify_password",
+        "importPath": "auth",
+        "description": "auth",
+        "isExtraImport": true,
+        "detail": "auth",
+        "documentation": {}
+    },
+    {
+        "label": "create_access_token",
+        "importPath": "auth",
+        "description": "auth",
+        "isExtraImport": true,
+        "detail": "auth",
+        "documentation": {}
+    },
+    {
+        "label": "decode_access_token",
+        "importPath": "auth",
+        "description": "auth",
+        "isExtraImport": true,
+        "detail": "auth",
+        "documentation": {}
+    },
+    {
+        "label": "hash_password",
+        "importPath": "auth",
+        "description": "auth",
+        "isExtraImport": true,
+        "detail": "auth",
+        "documentation": {}
+    },
+    {
+        "label": "verify_password",
+        "importPath": "auth",
+        "description": "auth",
+        "isExtraImport": true,
+        "detail": "auth",
+        "documentation": {}
+    },
+    {
+        "label": "create_access_token",
+        "importPath": "auth",
+        "description": "auth",
+        "isExtraImport": true,
+        "detail": "auth",
+        "documentation": {}
+    },
+    {
+        "label": "decode_access_token",
+        "importPath": "auth",
+        "description": "auth",
+        "isExtraImport": true,
+        "detail": "auth",
+        "documentation": {}
+    },
+    {
+        "label": "hash_password",
+        "importPath": "auth",
+        "description": "auth",
+        "isExtraImport": true,
+        "detail": "auth",
+        "documentation": {}
+    },
+    {
+        "label": "verify_password",
+        "importPath": "auth",
+        "description": "auth",
+        "isExtraImport": true,
+        "detail": "auth",
+        "documentation": {}
+    },
+    {
+        "label": "create_access_token",
+        "importPath": "auth",
+        "description": "auth",
+        "isExtraImport": true,
+        "detail": "auth",
+        "documentation": {}
+    },
+    {
+        "label": "decode_access_token",
+        "importPath": "auth",
+        "description": "auth",
+        "isExtraImport": true,
+        "detail": "auth",
+        "documentation": {}
+    },
+    {
+        "label": "hash_password",
+        "importPath": "auth",
+        "description": "auth",
+        "isExtraImport": true,
+        "detail": "auth",
+        "documentation": {}
+    },
+    {
+        "label": "verify_password",
+        "importPath": "auth",
+        "description": "auth",
+        "isExtraImport": true,
+        "detail": "auth",
+        "documentation": {}
+    },
+    {
+        "label": "hash_password",
+        "importPath": "auth",
+        "description": "auth",
+        "isExtraImport": true,
+        "detail": "auth",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "engine",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "get_db",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "engine",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "get_db",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "engine",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "get_db",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "engine",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "get_db",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "engine",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "get_db",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "SessionLocal",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "engine",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "Complaint",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "ComplaintStatusHistory",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "Complaint",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "ComplaintStatusHistory",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "Complaint",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "ComplaintStatusHistory",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "Complaint",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "ComplaintStatusHistory",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "Complaint",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "ComplaintStatusHistory",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "ComplaintHistoryResponse",
+        "importPath": "schemas",
+        "description": "schemas",
+        "isExtraImport": true,
+        "detail": "schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ComplaintResponse",
+        "importPath": "schemas",
+        "description": "schemas",
+        "isExtraImport": true,
+        "detail": "schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ComplaintUpdateRequest",
+        "importPath": "schemas",
+        "description": "schemas",
+        "isExtraImport": true,
+        "detail": "schemas",
+        "documentation": {}
+    },
+    {
+        "label": "LoginRequest",
+        "importPath": "schemas",
+        "description": "schemas",
+        "isExtraImport": true,
+        "detail": "schemas",
+        "documentation": {}
+    },
+    {
+        "label": "RegisterRequest",
+        "importPath": "schemas",
+        "description": "schemas",
+        "isExtraImport": true,
+        "detail": "schemas",
+        "documentation": {}
+    },
+    {
+        "label": "UserResponse",
+        "importPath": "schemas",
+        "description": "schemas",
+        "isExtraImport": true,
+        "detail": "schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ComplaintHistoryResponse",
+        "importPath": "schemas",
+        "description": "schemas",
+        "isExtraImport": true,
+        "detail": "schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ComplaintResponse",
+        "importPath": "schemas",
+        "description": "schemas",
+        "isExtraImport": true,
+        "detail": "schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ComplaintUpdateRequest",
+        "importPath": "schemas",
+        "description": "schemas",
+        "isExtraImport": true,
+        "detail": "schemas",
+        "documentation": {}
+    },
+    {
+        "label": "LoginRequest",
+        "importPath": "schemas",
+        "description": "schemas",
+        "isExtraImport": true,
+        "detail": "schemas",
+        "documentation": {}
+    },
+    {
+        "label": "RegisterRequest",
+        "importPath": "schemas",
+        "description": "schemas",
+        "isExtraImport": true,
+        "detail": "schemas",
+        "documentation": {}
+    },
+    {
+        "label": "UserResponse",
+        "importPath": "schemas",
+        "description": "schemas",
+        "isExtraImport": true,
+        "detail": "schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ComplaintHistoryResponse",
+        "importPath": "schemas",
+        "description": "schemas",
+        "isExtraImport": true,
+        "detail": "schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ComplaintResponse",
+        "importPath": "schemas",
+        "description": "schemas",
+        "isExtraImport": true,
+        "detail": "schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ComplaintUpdateRequest",
+        "importPath": "schemas",
+        "description": "schemas",
+        "isExtraImport": true,
+        "detail": "schemas",
+        "documentation": {}
+    },
+    {
+        "label": "LoginRequest",
+        "importPath": "schemas",
+        "description": "schemas",
+        "isExtraImport": true,
+        "detail": "schemas",
+        "documentation": {}
+    },
+    {
+        "label": "RegisterRequest",
+        "importPath": "schemas",
+        "description": "schemas",
+        "isExtraImport": true,
+        "detail": "schemas",
+        "documentation": {}
+    },
+    {
+        "label": "UserResponse",
+        "importPath": "schemas",
+        "description": "schemas",
+        "isExtraImport": true,
+        "detail": "schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ComplaintHistoryResponse",
+        "importPath": "schemas",
+        "description": "schemas",
+        "isExtraImport": true,
+        "detail": "schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ComplaintResponse",
+        "importPath": "schemas",
+        "description": "schemas",
+        "isExtraImport": true,
+        "detail": "schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ComplaintUpdateRequest",
+        "importPath": "schemas",
+        "description": "schemas",
+        "isExtraImport": true,
+        "detail": "schemas",
+        "documentation": {}
+    },
+    {
+        "label": "LoginRequest",
+        "importPath": "schemas",
+        "description": "schemas",
+        "isExtraImport": true,
+        "detail": "schemas",
+        "documentation": {}
+    },
+    {
+        "label": "RegisterRequest",
+        "importPath": "schemas",
+        "description": "schemas",
+        "isExtraImport": true,
+        "detail": "schemas",
+        "documentation": {}
+    },
+    {
+        "label": "UserResponse",
+        "importPath": "schemas",
+        "description": "schemas",
+        "isExtraImport": true,
+        "detail": "schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ComplaintHistoryResponse",
+        "importPath": "schemas",
+        "description": "schemas",
+        "isExtraImport": true,
+        "detail": "schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ComplaintResponse",
+        "importPath": "schemas",
+        "description": "schemas",
+        "isExtraImport": true,
+        "detail": "schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ComplaintUpdateRequest",
+        "importPath": "schemas",
+        "description": "schemas",
+        "isExtraImport": true,
+        "detail": "schemas",
+        "documentation": {}
+    },
+    {
+        "label": "LoginRequest",
+        "importPath": "schemas",
+        "description": "schemas",
+        "isExtraImport": true,
+        "detail": "schemas",
+        "documentation": {}
+    },
+    {
+        "label": "RegisterRequest",
+        "importPath": "schemas",
+        "description": "schemas",
+        "isExtraImport": true,
+        "detail": "schemas",
+        "documentation": {}
+    },
+    {
+        "label": "UserResponse",
+        "importPath": "schemas",
+        "description": "schemas",
+        "isExtraImport": true,
+        "detail": "schemas",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "EmailStr",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "hash_password",
+        "kind": 2,
+        "importPath": "backend.auth",
+        "description": "backend.auth",
+        "peekOfCode": "def hash_password(password: str) -> str:\n    return pwd_context.hash(password)\ndef verify_password(\n    plain_password: str,\n    hashed_password: str,\n) -> bool:\n    return pwd_context.verify(\n        plain_password,\n        hashed_password,\n    )",
+        "detail": "backend.auth",
+        "documentation": {}
+    },
+    {
+        "label": "verify_password",
+        "kind": 2,
+        "importPath": "backend.auth",
+        "description": "backend.auth",
+        "peekOfCode": "def verify_password(\n    plain_password: str,\n    hashed_password: str,\n) -> bool:\n    return pwd_context.verify(\n        plain_password,\n        hashed_password,\n    )\ndef create_access_token(\n    user_id: int,",
+        "detail": "backend.auth",
+        "documentation": {}
+    },
+    {
+        "label": "create_access_token",
+        "kind": 2,
+        "importPath": "backend.auth",
+        "description": "backend.auth",
+        "peekOfCode": "def create_access_token(\n    user_id: int,\n    role: str,\n):\n    expire = datetime.now(timezone.utc) + timedelta(\n        minutes=ACCESS_TOKEN_EXPIRE_MINUTES\n    )\n    payload = {\n        \"sub\": str(user_id),\n        \"role\": role,",
+        "detail": "backend.auth",
+        "documentation": {}
+    },
+    {
+        "label": "decode_access_token",
+        "kind": 2,
+        "importPath": "backend.auth",
+        "description": "backend.auth",
+        "peekOfCode": "def decode_access_token(token: str):\n    try:\n        payload = jwt.decode(\n            token,\n            SECRET_KEY,\n            algorithms=[ALGORITHM],\n        )\n        user_id = payload.get(\"sub\")\n        role = payload.get(\"role\")\n        if user_id is None or role is None:",
+        "detail": "backend.auth",
+        "documentation": {}
+    },
+    {
+        "label": "SECRET_KEY",
+        "kind": 5,
+        "importPath": "backend.auth",
+        "description": "backend.auth",
+        "peekOfCode": "SECRET_KEY = \"society-maintenance-tracker-secret-key-change-later\"\nALGORITHM = \"HS256\"\nACCESS_TOKEN_EXPIRE_MINUTES = 60 * 24\npwd_context = CryptContext(\n    schemes=[\"pbkdf2_sha256\"],\n    deprecated=\"auto\",\n)\ndef hash_password(password: str) -> str:\n    return pwd_context.hash(password)\ndef verify_password(",
+        "detail": "backend.auth",
+        "documentation": {}
+    },
+    {
+        "label": "ALGORITHM",
+        "kind": 5,
+        "importPath": "backend.auth",
+        "description": "backend.auth",
+        "peekOfCode": "ALGORITHM = \"HS256\"\nACCESS_TOKEN_EXPIRE_MINUTES = 60 * 24\npwd_context = CryptContext(\n    schemes=[\"pbkdf2_sha256\"],\n    deprecated=\"auto\",\n)\ndef hash_password(password: str) -> str:\n    return pwd_context.hash(password)\ndef verify_password(\n    plain_password: str,",
+        "detail": "backend.auth",
+        "documentation": {}
+    },
+    {
+        "label": "ACCESS_TOKEN_EXPIRE_MINUTES",
+        "kind": 5,
+        "importPath": "backend.auth",
+        "description": "backend.auth",
+        "peekOfCode": "ACCESS_TOKEN_EXPIRE_MINUTES = 60 * 24\npwd_context = CryptContext(\n    schemes=[\"pbkdf2_sha256\"],\n    deprecated=\"auto\",\n)\ndef hash_password(password: str) -> str:\n    return pwd_context.hash(password)\ndef verify_password(\n    plain_password: str,\n    hashed_password: str,",
+        "detail": "backend.auth",
+        "documentation": {}
+    },
+    {
+        "label": "pwd_context",
+        "kind": 5,
+        "importPath": "backend.auth",
+        "description": "backend.auth",
+        "peekOfCode": "pwd_context = CryptContext(\n    schemes=[\"pbkdf2_sha256\"],\n    deprecated=\"auto\",\n)\ndef hash_password(password: str) -> str:\n    return pwd_context.hash(password)\ndef verify_password(\n    plain_password: str,\n    hashed_password: str,\n) -> bool:",
+        "detail": "backend.auth",
+        "documentation": {}
+    },
+    {
+        "label": "get_db",
+        "kind": 2,
+        "importPath": "backend.database",
+        "description": "backend.database",
+        "peekOfCode": "def get_db():\n    db = SessionLocal()\n    try:\n        yield db\n    finally:\n        db.close()",
+        "detail": "backend.database",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASE_URL",
+        "kind": 5,
+        "importPath": "backend.database",
+        "description": "backend.database",
+        "peekOfCode": "DATABASE_URL = \"sqlite:///./society.db\"\nengine = create_engine(\n    DATABASE_URL,\n    connect_args={\"check_same_thread\": False}\n)\nSessionLocal = sessionmaker(\n    autocommit=False,\n    autoflush=False,\n    bind=engine\n)",
+        "detail": "backend.database",
+        "documentation": {}
+    },
+    {
+        "label": "engine",
+        "kind": 5,
+        "importPath": "backend.database",
+        "description": "backend.database",
+        "peekOfCode": "engine = create_engine(\n    DATABASE_URL,\n    connect_args={\"check_same_thread\": False}\n)\nSessionLocal = sessionmaker(\n    autocommit=False,\n    autoflush=False,\n    bind=engine\n)\nBase = declarative_base()",
+        "detail": "backend.database",
+        "documentation": {}
+    },
+    {
+        "label": "SessionLocal",
+        "kind": 5,
+        "importPath": "backend.database",
+        "description": "backend.database",
+        "peekOfCode": "SessionLocal = sessionmaker(\n    autocommit=False,\n    autoflush=False,\n    bind=engine\n)\nBase = declarative_base()\ndef get_db():\n    db = SessionLocal()\n    try:\n        yield db",
+        "detail": "backend.database",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "kind": 5,
+        "importPath": "backend.database",
+        "description": "backend.database",
+        "peekOfCode": "Base = declarative_base()\ndef get_db():\n    db = SessionLocal()\n    try:\n        yield db\n    finally:\n        db.close()",
+        "detail": "backend.database",
+        "documentation": {}
+    },
+    {
+        "label": "root",
+        "kind": 2,
+        "importPath": "backend.main-backup-before-cors",
+        "description": "backend.main-backup-before-cors",
+        "peekOfCode": "def root():\n    return {\n        \"message\": \"Society Maintenance Tracker API is running\"\n    }\n@app.get(\"/health\")\ndef health():\n    return {\n        \"status\": \"healthy\"\n    }\n# ============================================================",
+        "detail": "backend.main-backup-before-cors",
+        "documentation": {}
+    },
+    {
+        "label": "health",
+        "kind": 2,
+        "importPath": "backend.main-backup-before-cors",
+        "description": "backend.main-backup-before-cors",
+        "peekOfCode": "def health():\n    return {\n        \"status\": \"healthy\"\n    }\n# ============================================================\n# AUTHENTICATION HELPERS\n# ============================================================\ndef get_current_user(\n    authorization: str | None = Header(default=None),\n    db: Session = Depends(get_db),",
+        "detail": "backend.main-backup-before-cors",
+        "documentation": {}
+    },
+    {
+        "label": "get_current_user",
+        "kind": 2,
+        "importPath": "backend.main-backup-before-cors",
+        "description": "backend.main-backup-before-cors",
+        "peekOfCode": "def get_current_user(\n    authorization: str | None = Header(default=None),\n    db: Session = Depends(get_db),\n):\n    if not authorization:\n        raise HTTPException(\n            status_code=401,\n            detail=\"Authorization header is required\",\n        )\n    if not authorization.startswith(\"Bearer \"):",
+        "detail": "backend.main-backup-before-cors",
+        "documentation": {}
+    },
+    {
+        "label": "require_admin",
+        "kind": 2,
+        "importPath": "backend.main-backup-before-cors",
+        "description": "backend.main-backup-before-cors",
+        "peekOfCode": "def require_admin(\n    current_user: User = Depends(get_current_user),\n):\n    if current_user.role != \"admin\":\n        raise HTTPException(\n            status_code=403,\n            detail=\"Admin access required\",\n        )\n    return current_user\ndef require_resident(",
+        "detail": "backend.main-backup-before-cors",
+        "documentation": {}
+    },
+    {
+        "label": "require_resident",
+        "kind": 2,
+        "importPath": "backend.main-backup-before-cors",
+        "description": "backend.main-backup-before-cors",
+        "peekOfCode": "def require_resident(\n    current_user: User = Depends(get_current_user),\n):\n    if current_user.role != \"resident\":\n        raise HTTPException(\n            status_code=403,\n            detail=\"Resident access required\",\n        )\n    return current_user\n# ============================================================",
+        "detail": "backend.main-backup-before-cors",
+        "documentation": {}
+    },
+    {
+        "label": "is_complaint_overdue",
+        "kind": 2,
+        "importPath": "backend.main-backup-before-cors",
+        "description": "backend.main-backup-before-cors",
+        "peekOfCode": "def is_complaint_overdue(complaint: Complaint) -> bool:\n    if complaint.status == \"Resolved\":\n        return False\n    deadline = complaint.created_at + timedelta(\n        days=OVERDUE_DAYS\n    )\n    return datetime.utcnow() > deadline\n# ============================================================\n# REGISTER\n# ============================================================",
+        "detail": "backend.main-backup-before-cors",
+        "documentation": {}
+    },
+    {
+        "label": "register",
+        "kind": 2,
+        "importPath": "backend.main-backup-before-cors",
+        "description": "backend.main-backup-before-cors",
+        "peekOfCode": "def register(\n    data: RegisterRequest,\n    db: Session = Depends(get_db),\n):\n    existing_user = db.query(User).filter(\n        User.email == data.email\n    ).first()\n    if existing_user:\n        raise HTTPException(\n            status_code=400,",
+        "detail": "backend.main-backup-before-cors",
+        "documentation": {}
+    },
+    {
+        "label": "login",
+        "kind": 2,
+        "importPath": "backend.main-backup-before-cors",
+        "description": "backend.main-backup-before-cors",
+        "peekOfCode": "def login(\n    data: LoginRequest,\n    db: Session = Depends(get_db),\n):\n    user = db.query(User).filter(\n        User.email == data.email\n    ).first()\n    if not user:\n        raise HTTPException(\n            status_code=401,",
+        "detail": "backend.main-backup-before-cors",
+        "documentation": {}
+    },
+    {
+        "label": "get_me",
+        "kind": 2,
+        "importPath": "backend.main-backup-before-cors",
+        "description": "backend.main-backup-before-cors",
+        "peekOfCode": "def get_me(\n    current_user: User = Depends(get_current_user),\n):\n    return current_user\n# ============================================================\n# ROLE TEST ROUTES\n# ============================================================\n@app.get(\"/resident/test\")\ndef resident_test(\n    current_user: User = Depends(require_resident),",
+        "detail": "backend.main-backup-before-cors",
+        "documentation": {}
+    },
+    {
+        "label": "resident_test",
+        "kind": 2,
+        "importPath": "backend.main-backup-before-cors",
+        "description": "backend.main-backup-before-cors",
+        "peekOfCode": "def resident_test(\n    current_user: User = Depends(require_resident),\n):\n    return {\n        \"message\": \"Resident access successful\",\n        \"user\": current_user.name,\n    }\n@app.get(\"/admin/test\")\ndef admin_test(\n    current_user: User = Depends(require_admin),",
+        "detail": "backend.main-backup-before-cors",
+        "documentation": {}
+    },
+    {
+        "label": "admin_test",
+        "kind": 2,
+        "importPath": "backend.main-backup-before-cors",
+        "description": "backend.main-backup-before-cors",
+        "peekOfCode": "def admin_test(\n    current_user: User = Depends(require_admin),\n):\n    return {\n        \"message\": \"Admin access successful\",\n        \"user\": current_user.name,\n    }\n# ============================================================\n# CREATE COMPLAINT\n# ============================================================",
+        "detail": "backend.main-backup-before-cors",
+        "documentation": {}
+    },
+    {
+        "label": "get_my_complaints",
+        "kind": 2,
+        "importPath": "backend.main-backup-before-cors",
+        "description": "backend.main-backup-before-cors",
+        "peekOfCode": "def get_my_complaints(\n    current_user: User = Depends(require_resident),\n    db: Session = Depends(get_db),\n):\n    complaints = (\n        db.query(Complaint)\n        .filter(\n            Complaint.resident_id == current_user.id\n        )\n        .order_by(",
+        "detail": "backend.main-backup-before-cors",
+        "documentation": {}
+    },
+    {
+        "label": "get_complaint",
+        "kind": 2,
+        "importPath": "backend.main-backup-before-cors",
+        "description": "backend.main-backup-before-cors",
+        "peekOfCode": "def get_complaint(\n    complaint_id: int,\n    current_user: User = Depends(get_current_user),\n    db: Session = Depends(get_db),\n):\n    complaint = db.query(Complaint).filter(\n        Complaint.id == complaint_id\n    ).first()\n    if not complaint:\n        raise HTTPException(",
+        "detail": "backend.main-backup-before-cors",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_complaints",
+        "kind": 2,
+        "importPath": "backend.main-backup-before-cors",
+        "description": "backend.main-backup-before-cors",
+        "peekOfCode": "def get_all_complaints(\n    category: str | None = Query(\n        default=None\n    ),\n    status: str | None = Query(\n        default=None\n    ),\n    complaint_date: date | None = Query(\n        default=None\n    ),",
+        "detail": "backend.main-backup-before-cors",
+        "documentation": {}
+    },
+    {
+        "label": "update_complaint",
+        "kind": 2,
+        "importPath": "backend.main-backup-before-cors",
+        "description": "backend.main-backup-before-cors",
+        "peekOfCode": "def update_complaint(\n    complaint_id: int,\n    data: ComplaintUpdateRequest,\n    current_user: User = Depends(require_admin),\n    db: Session = Depends(get_db),\n):\n    complaint = db.query(Complaint).filter(\n        Complaint.id == complaint_id\n    ).first()\n    if not complaint:",
+        "detail": "backend.main-backup-before-cors",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "backend.main-backup-before-cors",
+        "description": "backend.main-backup-before-cors",
+        "peekOfCode": "app = FastAPI(\n    title=\"Society Maintenance Tracker API\",\n    description=\"Apartment society complaint and maintenance management system\",\n    version=\"1.0.0\",\n)\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=[\n        \"http://127.0.0.1:5173\",\n        \"http://127.0.0.1:5174\",",
+        "detail": "backend.main-backup-before-cors",
+        "documentation": {}
+    },
+    {
+        "label": "UPLOAD_DIR",
+        "kind": 5,
+        "importPath": "backend.main-backup-before-cors",
+        "description": "backend.main-backup-before-cors",
+        "peekOfCode": "UPLOAD_DIR = \"uploads\"\nos.makedirs(UPLOAD_DIR, exist_ok=True)\napp.mount(\n    \"/uploads\",\n    StaticFiles(directory=UPLOAD_DIR),\n    name=\"uploads\",\n)\n# ============================================================\n# CONFIGURATION\n# ============================================================",
+        "detail": "backend.main-backup-before-cors",
+        "documentation": {}
+    },
+    {
+        "label": "OVERDUE_DAYS",
+        "kind": 5,
+        "importPath": "backend.main-backup-before-cors",
+        "description": "backend.main-backup-before-cors",
+        "peekOfCode": "OVERDUE_DAYS = int(\n    os.getenv(\"OVERDUE_DAYS\", \"3\")\n)\n# ============================================================\n# BASIC ROUTES\n# ============================================================\n@app.get(\"/\")\ndef root():\n    return {\n        \"message\": \"Society Maintenance Tracker API is running\"",
+        "detail": "backend.main-backup-before-cors",
+        "documentation": {}
+    },
+    {
+        "label": "root",
+        "kind": 2,
+        "importPath": "backend.main-before-admin-complaint-fix",
+        "description": "backend.main-before-admin-complaint-fix",
+        "peekOfCode": "def root():\n    return {\n        \"message\": \"Society Maintenance Tracker API is running\"\n    }\n@app.get(\"/health\")\ndef health():\n    return {\n        \"status\": \"healthy\"\n    }\n# ============================================================",
+        "detail": "backend.main-before-admin-complaint-fix",
+        "documentation": {}
+    },
+    {
+        "label": "health",
+        "kind": 2,
+        "importPath": "backend.main-before-admin-complaint-fix",
+        "description": "backend.main-before-admin-complaint-fix",
+        "peekOfCode": "def health():\n    return {\n        \"status\": \"healthy\"\n    }\n# ============================================================\n# AUTHENTICATION HELPERS\n# ============================================================\ndef get_current_user(\n    authorization: str | None = Header(default=None),\n    db: Session = Depends(get_db),",
+        "detail": "backend.main-before-admin-complaint-fix",
+        "documentation": {}
+    },
+    {
+        "label": "get_current_user",
+        "kind": 2,
+        "importPath": "backend.main-before-admin-complaint-fix",
+        "description": "backend.main-before-admin-complaint-fix",
+        "peekOfCode": "def get_current_user(\n    authorization: str | None = Header(default=None),\n    db: Session = Depends(get_db),\n):\n    if not authorization:\n        raise HTTPException(\n            status_code=401,\n            detail=\"Authorization header is required\",\n        )\n    if not authorization.startswith(\"Bearer \"):",
+        "detail": "backend.main-before-admin-complaint-fix",
+        "documentation": {}
+    },
+    {
+        "label": "require_admin",
+        "kind": 2,
+        "importPath": "backend.main-before-admin-complaint-fix",
+        "description": "backend.main-before-admin-complaint-fix",
+        "peekOfCode": "def require_admin(\n    current_user: User = Depends(get_current_user),\n):\n    if current_user.role != \"admin\":\n        raise HTTPException(\n            status_code=403,\n            detail=\"Admin access required\",\n        )\n    return current_user\ndef require_resident(",
+        "detail": "backend.main-before-admin-complaint-fix",
+        "documentation": {}
+    },
+    {
+        "label": "require_resident",
+        "kind": 2,
+        "importPath": "backend.main-before-admin-complaint-fix",
+        "description": "backend.main-before-admin-complaint-fix",
+        "peekOfCode": "def require_resident(\n    current_user: User = Depends(get_current_user),\n):\n    if current_user.role != \"resident\":\n        raise HTTPException(\n            status_code=403,\n            detail=\"Resident access required\",\n        )\n    return current_user\n# ============================================================",
+        "detail": "backend.main-before-admin-complaint-fix",
+        "documentation": {}
+    },
+    {
+        "label": "is_complaint_overdue",
+        "kind": 2,
+        "importPath": "backend.main-before-admin-complaint-fix",
+        "description": "backend.main-before-admin-complaint-fix",
+        "peekOfCode": "def is_complaint_overdue(complaint: Complaint) -> bool:\n    if complaint.status == \"Resolved\":\n        return False\n    deadline = complaint.created_at + timedelta(\n        days=OVERDUE_DAYS\n    )\n    return datetime.utcnow() > deadline\n# ============================================================\n# REGISTER\n# ============================================================",
+        "detail": "backend.main-before-admin-complaint-fix",
+        "documentation": {}
+    },
+    {
+        "label": "register",
+        "kind": 2,
+        "importPath": "backend.main-before-admin-complaint-fix",
+        "description": "backend.main-before-admin-complaint-fix",
+        "peekOfCode": "def register(\n    data: RegisterRequest,\n    db: Session = Depends(get_db),\n):\n    existing_user = db.query(User).filter(\n        User.email == data.email\n    ).first()\n    if existing_user:\n        raise HTTPException(\n            status_code=400,",
+        "detail": "backend.main-before-admin-complaint-fix",
+        "documentation": {}
+    },
+    {
+        "label": "login",
+        "kind": 2,
+        "importPath": "backend.main-before-admin-complaint-fix",
+        "description": "backend.main-before-admin-complaint-fix",
+        "peekOfCode": "def login(\n    data: LoginRequest,\n    db: Session = Depends(get_db),\n):\n    user = db.query(User).filter(\n        User.email == data.email\n    ).first()\n    if not user:\n        raise HTTPException(\n            status_code=401,",
+        "detail": "backend.main-before-admin-complaint-fix",
+        "documentation": {}
+    },
+    {
+        "label": "get_me",
+        "kind": 2,
+        "importPath": "backend.main-before-admin-complaint-fix",
+        "description": "backend.main-before-admin-complaint-fix",
+        "peekOfCode": "def get_me(\n    current_user: User = Depends(get_current_user),\n):\n    return current_user\n# ============================================================\n# ROLE TEST ROUTES\n# ============================================================\n@app.get(\"/resident/test\")\ndef resident_test(\n    current_user: User = Depends(require_resident),",
+        "detail": "backend.main-before-admin-complaint-fix",
+        "documentation": {}
+    },
+    {
+        "label": "resident_test",
+        "kind": 2,
+        "importPath": "backend.main-before-admin-complaint-fix",
+        "description": "backend.main-before-admin-complaint-fix",
+        "peekOfCode": "def resident_test(\n    current_user: User = Depends(require_resident),\n):\n    return {\n        \"message\": \"Resident access successful\",\n        \"user\": current_user.name,\n    }\n@app.get(\"/admin/test\")\ndef admin_test(\n    current_user: User = Depends(require_admin),",
+        "detail": "backend.main-before-admin-complaint-fix",
+        "documentation": {}
+    },
+    {
+        "label": "admin_test",
+        "kind": 2,
+        "importPath": "backend.main-before-admin-complaint-fix",
+        "description": "backend.main-before-admin-complaint-fix",
+        "peekOfCode": "def admin_test(\n    current_user: User = Depends(require_admin),\n):\n    return {\n        \"message\": \"Admin access successful\",\n        \"user\": current_user.name,\n    }\n# ============================================================\n# CREATE COMPLAINT\n# ============================================================",
+        "detail": "backend.main-before-admin-complaint-fix",
+        "documentation": {}
+    },
+    {
+        "label": "get_my_complaints",
+        "kind": 2,
+        "importPath": "backend.main-before-admin-complaint-fix",
+        "description": "backend.main-before-admin-complaint-fix",
+        "peekOfCode": "def get_my_complaints(\n    current_user: User = Depends(require_resident),\n    db: Session = Depends(get_db),\n):\n    complaints = (\n        db.query(Complaint)\n        .filter(\n            Complaint.resident_id == current_user.id\n        )\n        .order_by(",
+        "detail": "backend.main-before-admin-complaint-fix",
+        "documentation": {}
+    },
+    {
+        "label": "get_complaint",
+        "kind": 2,
+        "importPath": "backend.main-before-admin-complaint-fix",
+        "description": "backend.main-before-admin-complaint-fix",
+        "peekOfCode": "def get_complaint(\n    complaint_id: int,\n    current_user: User = Depends(get_current_user),\n    db: Session = Depends(get_db),\n):\n    complaint = db.query(Complaint).filter(\n        Complaint.id == complaint_id\n    ).first()\n    if not complaint:\n        raise HTTPException(",
+        "detail": "backend.main-before-admin-complaint-fix",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_complaints",
+        "kind": 2,
+        "importPath": "backend.main-before-admin-complaint-fix",
+        "description": "backend.main-before-admin-complaint-fix",
+        "peekOfCode": "def get_all_complaints(\n    category: str | None = Query(\n        default=None\n    ),\n    status: str | None = Query(\n        default=None\n    ),\n    complaint_date: date | None = Query(\n        default=None\n    ),",
+        "detail": "backend.main-before-admin-complaint-fix",
+        "documentation": {}
+    },
+    {
+        "label": "update_complaint",
+        "kind": 2,
+        "importPath": "backend.main-before-admin-complaint-fix",
+        "description": "backend.main-before-admin-complaint-fix",
+        "peekOfCode": "def update_complaint(\n    complaint_id: int,\n    data: ComplaintUpdateRequest,\n    current_user: User = Depends(require_admin),\n    db: Session = Depends(get_db),\n):\n    complaint = db.query(Complaint).filter(\n        Complaint.id == complaint_id\n    ).first()\n    if not complaint:",
+        "detail": "backend.main-before-admin-complaint-fix",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "backend.main-before-admin-complaint-fix",
+        "description": "backend.main-before-admin-complaint-fix",
+        "peekOfCode": "app = FastAPI(\n    title=\"Society Maintenance Tracker API\",\n    description=\"Apartment society complaint and maintenance management system\",\n    version=\"1.0.0\",\n)\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=[\n        \"http://127.0.0.1:5173\",\n        \"http://127.0.0.1:5174\",",
+        "detail": "backend.main-before-admin-complaint-fix",
+        "documentation": {}
+    },
+    {
+        "label": "UPLOAD_DIR",
+        "kind": 5,
+        "importPath": "backend.main-before-admin-complaint-fix",
+        "description": "backend.main-before-admin-complaint-fix",
+        "peekOfCode": "UPLOAD_DIR = \"uploads\"\nos.makedirs(UPLOAD_DIR, exist_ok=True)\napp.mount(\n    \"/uploads\",\n    StaticFiles(directory=UPLOAD_DIR),\n    name=\"uploads\",\n)\n# ============================================================\n# CONFIGURATION\n# ============================================================",
+        "detail": "backend.main-before-admin-complaint-fix",
+        "documentation": {}
+    },
+    {
+        "label": "OVERDUE_DAYS",
+        "kind": 5,
+        "importPath": "backend.main-before-admin-complaint-fix",
+        "description": "backend.main-before-admin-complaint-fix",
+        "peekOfCode": "OVERDUE_DAYS = int(\n    os.getenv(\"OVERDUE_DAYS\", \"3\")\n)\n# ============================================================\n# BASIC ROUTES\n# ============================================================\n@app.get(\"/\")\ndef root():\n    return {\n        \"message\": \"Society Maintenance Tracker API is running\"",
+        "detail": "backend.main-before-admin-complaint-fix",
+        "documentation": {}
+    },
+    {
+        "label": "root",
+        "kind": 2,
+        "importPath": "backend.main-before-complaint-fix-2",
+        "description": "backend.main-before-complaint-fix-2",
+        "peekOfCode": "def root():\n    return {\n        \"message\": \"Society Maintenance Tracker API is running\"\n    }\n@app.get(\"/health\")\ndef health():\n    return {\n        \"status\": \"healthy\"\n    }\n# ============================================================",
+        "detail": "backend.main-before-complaint-fix-2",
+        "documentation": {}
+    },
+    {
+        "label": "health",
+        "kind": 2,
+        "importPath": "backend.main-before-complaint-fix-2",
+        "description": "backend.main-before-complaint-fix-2",
+        "peekOfCode": "def health():\n    return {\n        \"status\": \"healthy\"\n    }\n# ============================================================\n# AUTHENTICATION HELPERS\n# ============================================================\ndef get_current_user(\n    authorization: str | None = Header(default=None),\n    db: Session = Depends(get_db),",
+        "detail": "backend.main-before-complaint-fix-2",
+        "documentation": {}
+    },
+    {
+        "label": "get_current_user",
+        "kind": 2,
+        "importPath": "backend.main-before-complaint-fix-2",
+        "description": "backend.main-before-complaint-fix-2",
+        "peekOfCode": "def get_current_user(\n    authorization: str | None = Header(default=None),\n    db: Session = Depends(get_db),\n):\n    if not authorization:\n        raise HTTPException(\n            status_code=401,\n            detail=\"Authorization header is required\",\n        )\n    if not authorization.startswith(\"Bearer \"):",
+        "detail": "backend.main-before-complaint-fix-2",
+        "documentation": {}
+    },
+    {
+        "label": "require_admin",
+        "kind": 2,
+        "importPath": "backend.main-before-complaint-fix-2",
+        "description": "backend.main-before-complaint-fix-2",
+        "peekOfCode": "def require_admin(\n    current_user: User = Depends(get_current_user),\n):\n    if current_user.role != \"admin\":\n        raise HTTPException(\n            status_code=403,\n            detail=\"Admin access required\",\n        )\n    return current_user\ndef require_resident(",
+        "detail": "backend.main-before-complaint-fix-2",
+        "documentation": {}
+    },
+    {
+        "label": "require_resident",
+        "kind": 2,
+        "importPath": "backend.main-before-complaint-fix-2",
+        "description": "backend.main-before-complaint-fix-2",
+        "peekOfCode": "def require_resident(\n    current_user: User = Depends(get_current_user),\n):\n    if current_user.role != \"resident\":\n        raise HTTPException(\n            status_code=403,\n            detail=\"Resident access required\",\n        )\n    return current_user\n# ============================================================",
+        "detail": "backend.main-before-complaint-fix-2",
+        "documentation": {}
+    },
+    {
+        "label": "is_complaint_overdue",
+        "kind": 2,
+        "importPath": "backend.main-before-complaint-fix-2",
+        "description": "backend.main-before-complaint-fix-2",
+        "peekOfCode": "def is_complaint_overdue(complaint: Complaint) -> bool:\n    if complaint.status == \"Resolved\":\n        return False\n    deadline = complaint.created_at + timedelta(\n        days=OVERDUE_DAYS\n    )\n    return datetime.utcnow() > deadline\n# ============================================================\n# REGISTER\n# ============================================================",
+        "detail": "backend.main-before-complaint-fix-2",
+        "documentation": {}
+    },
+    {
+        "label": "register",
+        "kind": 2,
+        "importPath": "backend.main-before-complaint-fix-2",
+        "description": "backend.main-before-complaint-fix-2",
+        "peekOfCode": "def register(\n    data: RegisterRequest,\n    db: Session = Depends(get_db),\n):\n    existing_user = db.query(User).filter(\n        User.email == data.email\n    ).first()\n    if existing_user:\n        raise HTTPException(\n            status_code=400,",
+        "detail": "backend.main-before-complaint-fix-2",
+        "documentation": {}
+    },
+    {
+        "label": "login",
+        "kind": 2,
+        "importPath": "backend.main-before-complaint-fix-2",
+        "description": "backend.main-before-complaint-fix-2",
+        "peekOfCode": "def login(\n    data: LoginRequest,\n    db: Session = Depends(get_db),\n):\n    user = db.query(User).filter(\n        User.email == data.email\n    ).first()\n    if not user:\n        raise HTTPException(\n            status_code=401,",
+        "detail": "backend.main-before-complaint-fix-2",
+        "documentation": {}
+    },
+    {
+        "label": "get_me",
+        "kind": 2,
+        "importPath": "backend.main-before-complaint-fix-2",
+        "description": "backend.main-before-complaint-fix-2",
+        "peekOfCode": "def get_me(\n    current_user: User = Depends(get_current_user),\n):\n    return current_user\n# ============================================================\n# ROLE TEST ROUTES\n# ============================================================\n@app.get(\"/resident/test\")\ndef resident_test(\n    current_user: User = Depends(get_current_user),",
+        "detail": "backend.main-before-complaint-fix-2",
+        "documentation": {}
+    },
+    {
+        "label": "resident_test",
+        "kind": 2,
+        "importPath": "backend.main-before-complaint-fix-2",
+        "description": "backend.main-before-complaint-fix-2",
+        "peekOfCode": "def resident_test(\n    current_user: User = Depends(get_current_user),\n):\n    return {\n        \"message\": \"Resident access successful\",\n        \"user\": current_user.name,\n    }\n@app.get(\"/admin/test\")\ndef admin_test(\n    current_user: User = Depends(require_admin),",
+        "detail": "backend.main-before-complaint-fix-2",
+        "documentation": {}
+    },
+    {
+        "label": "admin_test",
+        "kind": 2,
+        "importPath": "backend.main-before-complaint-fix-2",
+        "description": "backend.main-before-complaint-fix-2",
+        "peekOfCode": "def admin_test(\n    current_user: User = Depends(require_admin),\n):\n    return {\n        \"message\": \"Admin access successful\",\n        \"user\": current_user.name,\n    }\n# ============================================================\n# CREATE COMPLAINT\n# ============================================================",
+        "detail": "backend.main-before-complaint-fix-2",
+        "documentation": {}
+    },
+    {
+        "label": "get_my_complaints",
+        "kind": 2,
+        "importPath": "backend.main-before-complaint-fix-2",
+        "description": "backend.main-before-complaint-fix-2",
+        "peekOfCode": "def get_my_complaints(\n    current_user: User = Depends(require_resident),\n    db: Session = Depends(get_db),\n):\n    complaints = (\n        db.query(Complaint)\n        .filter(\n            Complaint.resident_id == current_user.id\n        )\n        .order_by(",
+        "detail": "backend.main-before-complaint-fix-2",
+        "documentation": {}
+    },
+    {
+        "label": "get_complaint",
+        "kind": 2,
+        "importPath": "backend.main-before-complaint-fix-2",
+        "description": "backend.main-before-complaint-fix-2",
+        "peekOfCode": "def get_complaint(\n    complaint_id: int,\n    current_user: User = Depends(get_current_user),\n    db: Session = Depends(get_db),\n):\n    complaint = db.query(Complaint).filter(\n        Complaint.id == complaint_id\n    ).first()\n    if not complaint:\n        raise HTTPException(",
+        "detail": "backend.main-before-complaint-fix-2",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_complaints",
+        "kind": 2,
+        "importPath": "backend.main-before-complaint-fix-2",
+        "description": "backend.main-before-complaint-fix-2",
+        "peekOfCode": "def get_all_complaints(\n    category: str | None = Query(\n        default=None\n    ),\n    status: str | None = Query(\n        default=None\n    ),\n    complaint_date: date | None = Query(\n        default=None\n    ),",
+        "detail": "backend.main-before-complaint-fix-2",
+        "documentation": {}
+    },
+    {
+        "label": "update_complaint",
+        "kind": 2,
+        "importPath": "backend.main-before-complaint-fix-2",
+        "description": "backend.main-before-complaint-fix-2",
+        "peekOfCode": "def update_complaint(\n    complaint_id: int,\n    data: ComplaintUpdateRequest,\n    current_user: User = Depends(require_admin),\n    db: Session = Depends(get_db),\n):\n    complaint = db.query(Complaint).filter(\n        Complaint.id == complaint_id\n    ).first()\n    if not complaint:",
+        "detail": "backend.main-before-complaint-fix-2",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "backend.main-before-complaint-fix-2",
+        "description": "backend.main-before-complaint-fix-2",
+        "peekOfCode": "app = FastAPI(\n    title=\"Society Maintenance Tracker API\",\n    description=\"Apartment society complaint and maintenance management system\",\n    version=\"1.0.0\",\n)\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=[\n        \"http://127.0.0.1:5173\",\n        \"http://127.0.0.1:5174\",",
+        "detail": "backend.main-before-complaint-fix-2",
+        "documentation": {}
+    },
+    {
+        "label": "UPLOAD_DIR",
+        "kind": 5,
+        "importPath": "backend.main-before-complaint-fix-2",
+        "description": "backend.main-before-complaint-fix-2",
+        "peekOfCode": "UPLOAD_DIR = \"uploads\"\nos.makedirs(UPLOAD_DIR, exist_ok=True)\napp.mount(\n    \"/uploads\",\n    StaticFiles(directory=UPLOAD_DIR),\n    name=\"uploads\",\n)\n# ============================================================\n# CONFIGURATION\n# ============================================================",
+        "detail": "backend.main-before-complaint-fix-2",
+        "documentation": {}
+    },
+    {
+        "label": "OVERDUE_DAYS",
+        "kind": 5,
+        "importPath": "backend.main-before-complaint-fix-2",
+        "description": "backend.main-before-complaint-fix-2",
+        "peekOfCode": "OVERDUE_DAYS = int(\n    os.getenv(\"OVERDUE_DAYS\", \"3\")\n)\n# ============================================================\n# BASIC ROUTES\n# ============================================================\n@app.get(\"/\")\ndef root():\n    return {\n        \"message\": \"Society Maintenance Tracker API is running\"",
+        "detail": "backend.main-before-complaint-fix-2",
+        "documentation": {}
+    },
+    {
+        "label": "root",
+        "kind": 2,
+        "importPath": "backend.main-before-final-complaint-fix",
+        "description": "backend.main-before-final-complaint-fix",
+        "peekOfCode": "def root():\n    return {\n        \"message\": \"Society Maintenance Tracker API is running\"\n    }\n@app.get(\"/health\")\ndef health():\n    return {\n        \"status\": \"healthy\"\n    }\n# ============================================================",
+        "detail": "backend.main-before-final-complaint-fix",
+        "documentation": {}
+    },
+    {
+        "label": "health",
+        "kind": 2,
+        "importPath": "backend.main-before-final-complaint-fix",
+        "description": "backend.main-before-final-complaint-fix",
+        "peekOfCode": "def health():\n    return {\n        \"status\": \"healthy\"\n    }\n# ============================================================\n# AUTHENTICATION HELPERS\n# ============================================================\ndef get_current_user(\n    authorization: str | None = Header(default=None),\n    db: Session = Depends(get_db),",
+        "detail": "backend.main-before-final-complaint-fix",
+        "documentation": {}
+    },
+    {
+        "label": "get_current_user",
+        "kind": 2,
+        "importPath": "backend.main-before-final-complaint-fix",
+        "description": "backend.main-before-final-complaint-fix",
+        "peekOfCode": "def get_current_user(\n    authorization: str | None = Header(default=None),\n    db: Session = Depends(get_db),\n):\n    if not authorization:\n        raise HTTPException(\n            status_code=401,\n            detail=\"Authorization header is required\",\n        )\n    if not authorization.startswith(\"Bearer \"):",
+        "detail": "backend.main-before-final-complaint-fix",
+        "documentation": {}
+    },
+    {
+        "label": "require_admin",
+        "kind": 2,
+        "importPath": "backend.main-before-final-complaint-fix",
+        "description": "backend.main-before-final-complaint-fix",
+        "peekOfCode": "def require_admin(\n    current_user: User = Depends(get_current_user),\n):\n    if current_user.role != \"admin\":\n        raise HTTPException(\n            status_code=403,\n            detail=\"Admin access required\",\n        )\n    return current_user\ndef require_resident(",
+        "detail": "backend.main-before-final-complaint-fix",
+        "documentation": {}
+    },
+    {
+        "label": "require_resident",
+        "kind": 2,
+        "importPath": "backend.main-before-final-complaint-fix",
+        "description": "backend.main-before-final-complaint-fix",
+        "peekOfCode": "def require_resident(\n    current_user: User = Depends(get_current_user),\n):\n    if current_user.role != \"resident\":\n        raise HTTPException(\n            status_code=403,\n            detail=\"Resident access required\",\n        )\n    return current_user\n# ============================================================",
+        "detail": "backend.main-before-final-complaint-fix",
+        "documentation": {}
+    },
+    {
+        "label": "is_complaint_overdue",
+        "kind": 2,
+        "importPath": "backend.main-before-final-complaint-fix",
+        "description": "backend.main-before-final-complaint-fix",
+        "peekOfCode": "def is_complaint_overdue(complaint: Complaint) -> bool:\n    if complaint.status == \"Resolved\":\n        return False\n    deadline = complaint.created_at + timedelta(\n        days=OVERDUE_DAYS\n    )\n    return datetime.utcnow() > deadline\n# ============================================================\n# REGISTER\n# ============================================================",
+        "detail": "backend.main-before-final-complaint-fix",
+        "documentation": {}
+    },
+    {
+        "label": "register",
+        "kind": 2,
+        "importPath": "backend.main-before-final-complaint-fix",
+        "description": "backend.main-before-final-complaint-fix",
+        "peekOfCode": "def register(\n    data: RegisterRequest,\n    db: Session = Depends(get_db),\n):\n    existing_user = db.query(User).filter(\n        User.email == data.email\n    ).first()\n    if existing_user:\n        raise HTTPException(\n            status_code=400,",
+        "detail": "backend.main-before-final-complaint-fix",
+        "documentation": {}
+    },
+    {
+        "label": "login",
+        "kind": 2,
+        "importPath": "backend.main-before-final-complaint-fix",
+        "description": "backend.main-before-final-complaint-fix",
+        "peekOfCode": "def login(\n    data: LoginRequest,\n    db: Session = Depends(get_db),\n):\n    user = db.query(User).filter(\n        User.email == data.email\n    ).first()\n    if not user:\n        raise HTTPException(\n            status_code=401,",
+        "detail": "backend.main-before-final-complaint-fix",
+        "documentation": {}
+    },
+    {
+        "label": "get_me",
+        "kind": 2,
+        "importPath": "backend.main-before-final-complaint-fix",
+        "description": "backend.main-before-final-complaint-fix",
+        "peekOfCode": "def get_me(\n    current_user: User = Depends(get_current_user),\n):\n    return current_user\n# ============================================================\n# ROLE TEST ROUTES\n# ============================================================\n@app.get(\"/resident/test\")\ndef resident_test(\n    current_user: User = Depends(get_current_user),",
+        "detail": "backend.main-before-final-complaint-fix",
+        "documentation": {}
+    },
+    {
+        "label": "resident_test",
+        "kind": 2,
+        "importPath": "backend.main-before-final-complaint-fix",
+        "description": "backend.main-before-final-complaint-fix",
+        "peekOfCode": "def resident_test(\n    current_user: User = Depends(get_current_user),\n):\n    return {\n        \"message\": \"Resident access successful\",\n        \"user\": current_user.name,\n    }\n@app.get(\"/admin/test\")\ndef admin_test(\n    current_user: User = Depends(require_admin),",
+        "detail": "backend.main-before-final-complaint-fix",
+        "documentation": {}
+    },
+    {
+        "label": "admin_test",
+        "kind": 2,
+        "importPath": "backend.main-before-final-complaint-fix",
+        "description": "backend.main-before-final-complaint-fix",
+        "peekOfCode": "def admin_test(\n    current_user: User = Depends(require_admin),\n):\n    return {\n        \"message\": \"Admin access successful\",\n        \"user\": current_user.name,\n    }\n# ============================================================\n# CREATE COMPLAINT\n# ============================================================",
+        "detail": "backend.main-before-final-complaint-fix",
+        "documentation": {}
+    },
+    {
+        "label": "get_my_complaints",
+        "kind": 2,
+        "importPath": "backend.main-before-final-complaint-fix",
+        "description": "backend.main-before-final-complaint-fix",
+        "peekOfCode": "def get_my_complaints(\n    current_user: User = Depends(require_resident),\n    db: Session = Depends(get_db),\n):\n    complaints = (\n        db.query(Complaint)\n        .filter(\n            Complaint.resident_id == current_user.id\n        )\n        .order_by(",
+        "detail": "backend.main-before-final-complaint-fix",
+        "documentation": {}
+    },
+    {
+        "label": "get_complaint",
+        "kind": 2,
+        "importPath": "backend.main-before-final-complaint-fix",
+        "description": "backend.main-before-final-complaint-fix",
+        "peekOfCode": "def get_complaint(\n    complaint_id: int,\n    current_user: User = Depends(get_current_user),\n    db: Session = Depends(get_db),\n):\n    complaint = db.query(Complaint).filter(\n        Complaint.id == complaint_id\n    ).first()\n    if not complaint:\n        raise HTTPException(",
+        "detail": "backend.main-before-final-complaint-fix",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_complaints",
+        "kind": 2,
+        "importPath": "backend.main-before-final-complaint-fix",
+        "description": "backend.main-before-final-complaint-fix",
+        "peekOfCode": "def get_all_complaints(\n    category: str | None = Query(\n        default=None\n    ),\n    status: str | None = Query(\n        default=None\n    ),\n    complaint_date: date | None = Query(\n        default=None\n    ),",
+        "detail": "backend.main-before-final-complaint-fix",
+        "documentation": {}
+    },
+    {
+        "label": "update_complaint",
+        "kind": 2,
+        "importPath": "backend.main-before-final-complaint-fix",
+        "description": "backend.main-before-final-complaint-fix",
+        "peekOfCode": "def update_complaint(\n    complaint_id: int,\n    data: ComplaintUpdateRequest,\n    current_user: User = Depends(require_admin),\n    db: Session = Depends(get_db),\n):\n    complaint = db.query(Complaint).filter(\n        Complaint.id == complaint_id\n    ).first()\n    if not complaint:",
+        "detail": "backend.main-before-final-complaint-fix",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "backend.main-before-final-complaint-fix",
+        "description": "backend.main-before-final-complaint-fix",
+        "peekOfCode": "app = FastAPI(\n    title=\"Society Maintenance Tracker API\",\n    description=\"Apartment society complaint and maintenance management system\",\n    version=\"1.0.0\",\n)\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=[\n        \"http://127.0.0.1:5173\",\n        \"http://127.0.0.1:5174\",",
+        "detail": "backend.main-before-final-complaint-fix",
+        "documentation": {}
+    },
+    {
+        "label": "UPLOAD_DIR",
+        "kind": 5,
+        "importPath": "backend.main-before-final-complaint-fix",
+        "description": "backend.main-before-final-complaint-fix",
+        "peekOfCode": "UPLOAD_DIR = \"uploads\"\nos.makedirs(UPLOAD_DIR, exist_ok=True)\napp.mount(\n    \"/uploads\",\n    StaticFiles(directory=UPLOAD_DIR),\n    name=\"uploads\",\n)\n# ============================================================\n# CONFIGURATION\n# ============================================================",
+        "detail": "backend.main-before-final-complaint-fix",
+        "documentation": {}
+    },
+    {
+        "label": "OVERDUE_DAYS",
+        "kind": 5,
+        "importPath": "backend.main-before-final-complaint-fix",
+        "description": "backend.main-before-final-complaint-fix",
+        "peekOfCode": "OVERDUE_DAYS = int(\n    os.getenv(\"OVERDUE_DAYS\", \"3\")\n)\n# ============================================================\n# BASIC ROUTES\n# ============================================================\n@app.get(\"/\")\ndef root():\n    return {\n        \"message\": \"Society Maintenance Tracker API is running\"",
+        "detail": "backend.main-before-final-complaint-fix",
+        "documentation": {}
+    },
+    {
+        "label": "root",
+        "kind": 2,
+        "importPath": "backend.main",
+        "description": "backend.main",
+        "peekOfCode": "def root():\n    return {\n        \"message\": \"Society Maintenance Tracker API is running\"\n    }\n@app.get(\"/health\")\ndef health():\n    return {\n        \"status\": \"healthy\"\n    }\n# ============================================================",
+        "detail": "backend.main",
+        "documentation": {}
+    },
+    {
+        "label": "health",
+        "kind": 2,
+        "importPath": "backend.main",
+        "description": "backend.main",
+        "peekOfCode": "def health():\n    return {\n        \"status\": \"healthy\"\n    }\n# ============================================================\n# AUTHENTICATION HELPERS\n# ============================================================\ndef get_current_user(\n    authorization: str | None = Header(default=None),\n    db: Session = Depends(get_db),",
+        "detail": "backend.main",
+        "documentation": {}
+    },
+    {
+        "label": "get_current_user",
+        "kind": 2,
+        "importPath": "backend.main",
+        "description": "backend.main",
+        "peekOfCode": "def get_current_user(\n    authorization: str | None = Header(default=None),\n    db: Session = Depends(get_db),\n):\n    if not authorization:\n        raise HTTPException(\n            status_code=401,\n            detail=\"Authorization header is required\",\n        )\n    if not authorization.startswith(\"Bearer \"):",
+        "detail": "backend.main",
+        "documentation": {}
+    },
+    {
+        "label": "require_admin",
+        "kind": 2,
+        "importPath": "backend.main",
+        "description": "backend.main",
+        "peekOfCode": "def require_admin(\n    current_user: User = Depends(get_current_user),\n):\n    if current_user.role != \"admin\":\n        raise HTTPException(\n            status_code=403,\n            detail=\"Admin access required\",\n        )\n    return current_user\ndef require_resident(",
+        "detail": "backend.main",
+        "documentation": {}
+    },
+    {
+        "label": "require_resident",
+        "kind": 2,
+        "importPath": "backend.main",
+        "description": "backend.main",
+        "peekOfCode": "def require_resident(\n    current_user: User = Depends(get_current_user),\n):\n    if current_user.role != \"resident\":\n        raise HTTPException(\n            status_code=403,\n            detail=\"Resident access required\",\n        )\n    return current_user\n# ============================================================",
+        "detail": "backend.main",
+        "documentation": {}
+    },
+    {
+        "label": "is_complaint_overdue",
+        "kind": 2,
+        "importPath": "backend.main",
+        "description": "backend.main",
+        "peekOfCode": "def is_complaint_overdue(complaint: Complaint) -> bool:\n    if complaint.status == \"Resolved\":\n        return False\n    deadline = complaint.created_at + timedelta(\n        days=OVERDUE_DAYS\n    )\n    return datetime.utcnow() > deadline\n# ============================================================\n# REGISTER\n# ============================================================",
+        "detail": "backend.main",
+        "documentation": {}
+    },
+    {
+        "label": "register",
+        "kind": 2,
+        "importPath": "backend.main",
+        "description": "backend.main",
+        "peekOfCode": "def register(\n    data: RegisterRequest,\n    db: Session = Depends(get_db),\n):\n    existing_user = db.query(User).filter(\n        User.email == data.email\n    ).first()\n    if existing_user:\n        raise HTTPException(\n            status_code=400,",
+        "detail": "backend.main",
+        "documentation": {}
+    },
+    {
+        "label": "login",
+        "kind": 2,
+        "importPath": "backend.main",
+        "description": "backend.main",
+        "peekOfCode": "def login(\n    data: LoginRequest,\n    db: Session = Depends(get_db),\n):\n    user = db.query(User).filter(\n        User.email == data.email\n    ).first()\n    if not user:\n        raise HTTPException(\n            status_code=401,",
+        "detail": "backend.main",
+        "documentation": {}
+    },
+    {
+        "label": "get_me",
+        "kind": 2,
+        "importPath": "backend.main",
+        "description": "backend.main",
+        "peekOfCode": "def get_me(\n    current_user: User = Depends(get_current_user),\n):\n    return current_user\n# ============================================================\n# ROLE TEST ROUTES\n# ============================================================\n@app.get(\"/resident/test\")\ndef resident_test(\n    current_user: User = Depends(get_current_user),",
+        "detail": "backend.main",
+        "documentation": {}
+    },
+    {
+        "label": "resident_test",
+        "kind": 2,
+        "importPath": "backend.main",
+        "description": "backend.main",
+        "peekOfCode": "def resident_test(\n    current_user: User = Depends(get_current_user),\n):\n    return {\n        \"message\": \"Resident access successful\",\n        \"user\": current_user.name,\n    }\n@app.get(\"/admin/test\")\ndef admin_test(\n    current_user: User = Depends(require_admin),",
+        "detail": "backend.main",
+        "documentation": {}
+    },
+    {
+        "label": "admin_test",
+        "kind": 2,
+        "importPath": "backend.main",
+        "description": "backend.main",
+        "peekOfCode": "def admin_test(\n    current_user: User = Depends(require_admin),\n):\n    return {\n        \"message\": \"Admin access successful\",\n        \"user\": current_user.name,\n    }\n# ============================================================\n# CREATE COMPLAINT\n# ============================================================",
+        "detail": "backend.main",
+        "documentation": {}
+    },
+    {
+        "label": "get_my_complaints",
+        "kind": 2,
+        "importPath": "backend.main",
+        "description": "backend.main",
+        "peekOfCode": "def get_my_complaints(\n    current_user: User = Depends(get_current_user),\n    db: Session = Depends(get_db),\n):\n    complaints = (\n        db.query(Complaint)\n        .filter(\n            Complaint.resident_id == current_user.id\n        )\n        .order_by(",
+        "detail": "backend.main",
+        "documentation": {}
+    },
+    {
+        "label": "get_complaint",
+        "kind": 2,
+        "importPath": "backend.main",
+        "description": "backend.main",
+        "peekOfCode": "def get_complaint(\n    complaint_id: int,\n    current_user: User = Depends(get_current_user),\n    db: Session = Depends(get_db),\n):\n    complaint = db.query(Complaint).filter(\n        Complaint.id == complaint_id\n    ).first()\n    if not complaint:\n        raise HTTPException(",
+        "detail": "backend.main",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_complaints",
+        "kind": 2,
+        "importPath": "backend.main",
+        "description": "backend.main",
+        "peekOfCode": "def get_all_complaints(\n    category: str | None = Query(\n        default=None\n    ),\n    status: str | None = Query(\n        default=None\n    ),\n    complaint_date: date | None = Query(\n        default=None\n    ),",
+        "detail": "backend.main",
+        "documentation": {}
+    },
+    {
+        "label": "update_complaint",
+        "kind": 2,
+        "importPath": "backend.main",
+        "description": "backend.main",
+        "peekOfCode": "def update_complaint(\n    complaint_id: int,\n    data: ComplaintUpdateRequest,\n    current_user: User = Depends(require_admin),\n    db: Session = Depends(get_db),\n):\n    complaint = db.query(Complaint).filter(\n        Complaint.id == complaint_id\n    ).first()\n    if not complaint:",
+        "detail": "backend.main",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "backend.main",
+        "description": "backend.main",
+        "peekOfCode": "app = FastAPI(\n    title=\"Society Maintenance Tracker API\",\n    description=\"Apartment society complaint and maintenance management system\",\n    version=\"1.0.0\",\n)\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=[\n        \"http://127.0.0.1:5173\",\n        \"http://127.0.0.1:5174\",",
+        "detail": "backend.main",
+        "documentation": {}
+    },
+    {
+        "label": "UPLOAD_DIR",
+        "kind": 5,
+        "importPath": "backend.main",
+        "description": "backend.main",
+        "peekOfCode": "UPLOAD_DIR = \"uploads\"\nos.makedirs(UPLOAD_DIR, exist_ok=True)\napp.mount(\n    \"/uploads\",\n    StaticFiles(directory=UPLOAD_DIR),\n    name=\"uploads\",\n)\n# ============================================================\n# CONFIGURATION\n# ============================================================",
+        "detail": "backend.main",
+        "documentation": {}
+    },
+    {
+        "label": "OVERDUE_DAYS",
+        "kind": 5,
+        "importPath": "backend.main",
+        "description": "backend.main",
+        "peekOfCode": "OVERDUE_DAYS = int(\n    os.getenv(\"OVERDUE_DAYS\", \"3\")\n)\n# ============================================================\n# BASIC ROUTES\n# ============================================================\n@app.get(\"/\")\ndef root():\n    return {\n        \"message\": \"Society Maintenance Tracker API is running\"",
+        "detail": "backend.main",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "kind": 6,
+        "importPath": "backend.models",
+        "description": "backend.models",
+        "peekOfCode": "class User(Base):\n    __tablename__ = \"users\"\n    id = Column(Integer, primary_key=True, index=True)\n    name = Column(String(100), nullable=False)\n    email = Column(\n        String(255),\n        unique=True,\n        index=True,\n        nullable=False,\n    )",
+        "detail": "backend.models",
+        "documentation": {}
+    },
+    {
+        "label": "Complaint",
+        "kind": 6,
+        "importPath": "backend.models",
+        "description": "backend.models",
+        "peekOfCode": "class Complaint(Base):\n    __tablename__ = \"complaints\"\n    id = Column(Integer, primary_key=True, index=True)\n    resident_id = Column(\n        Integer,\n        ForeignKey(\"users.id\"),\n        nullable=False,\n    )\n    category = Column(\n        String(100),",
+        "detail": "backend.models",
+        "documentation": {}
+    },
+    {
+        "label": "ComplaintStatusHistory",
+        "kind": 6,
+        "importPath": "backend.models",
+        "description": "backend.models",
+        "peekOfCode": "class ComplaintStatusHistory(Base):\n    __tablename__ = \"complaint_status_history\"\n    id = Column(\n        Integer,\n        primary_key=True,\n        index=True,\n    )\n    complaint_id = Column(\n        Integer,\n        ForeignKey(\"complaints.id\"),",
+        "detail": "backend.models",
+        "documentation": {}
+    },
+    {
+        "label": "Notice",
+        "kind": 6,
+        "importPath": "backend.models",
+        "description": "backend.models",
+        "peekOfCode": "class Notice(Base):\n    __tablename__ = \"notices\"\n    id = Column(\n        Integer,\n        primary_key=True,\n        index=True,\n    )\n    title = Column(\n        String(200),\n        nullable=False,",
+        "detail": "backend.models",
+        "documentation": {}
+    },
+    {
+        "label": "RegisterRequest",
+        "kind": 6,
+        "importPath": "backend.schemas",
+        "description": "backend.schemas",
+        "peekOfCode": "class RegisterRequest(BaseModel):\n    name: str = Field(min_length=2, max_length=100)\n    email: EmailStr\n    password: str = Field(min_length=6, max_length=100)\nclass LoginRequest(BaseModel):\n    email: EmailStr\n    password: str\nclass UserResponse(BaseModel):\n    id: int\n    name: str",
+        "detail": "backend.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "LoginRequest",
+        "kind": 6,
+        "importPath": "backend.schemas",
+        "description": "backend.schemas",
+        "peekOfCode": "class LoginRequest(BaseModel):\n    email: EmailStr\n    password: str\nclass UserResponse(BaseModel):\n    id: int\n    name: str\n    email: str\n    role: str\n    class Config:\n        from_attributes = True",
+        "detail": "backend.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "UserResponse",
+        "kind": 6,
+        "importPath": "backend.schemas",
+        "description": "backend.schemas",
+        "peekOfCode": "class UserResponse(BaseModel):\n    id: int\n    name: str\n    email: str\n    role: str\n    class Config:\n        from_attributes = True\n# ============================================================\n# COMPLAINT SCHEMAS\n# ============================================================",
+        "detail": "backend.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ComplaintResponse",
+        "kind": 6,
+        "importPath": "backend.schemas",
+        "description": "backend.schemas",
+        "peekOfCode": "class ComplaintResponse(BaseModel):\n    id: int\n    category: str\n    description: str\n    photo_url: str | None\n    priority: str\n    status: str\n    created_at: str\n    overdue: bool\n    class Config:",
+        "detail": "backend.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ComplaintHistoryResponse",
+        "kind": 6,
+        "importPath": "backend.schemas",
+        "description": "backend.schemas",
+        "peekOfCode": "class ComplaintHistoryResponse(BaseModel):\n    id: int\n    old_status: str | None\n    new_status: str\n    changed_by: int\n    note: str | None\n    created_at: str\nclass ComplaintUpdateRequest(BaseModel):\n    status: str | None = None\n    priority: str | None = None",
+        "detail": "backend.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ComplaintUpdateRequest",
+        "kind": 6,
+        "importPath": "backend.schemas",
+        "description": "backend.schemas",
+        "peekOfCode": "class ComplaintUpdateRequest(BaseModel):\n    status: str | None = None\n    priority: str | None = None\n    note: str | None = None",
+        "detail": "backend.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "db",
+        "kind": 5,
+        "importPath": "backend.seed_admin",
+        "description": "backend.seed_admin",
+        "peekOfCode": "db = SessionLocal()\nADMIN_EMAIL = \"admin@society.com\"\nADMIN_PASSWORD = \"admin123\"\nexisting_admin = db.query(User).filter(\n    User.email == ADMIN_EMAIL\n).first()\nif existing_admin:\n    print(\"Admin already exists.\")\nelse:\n    admin = User(",
+        "detail": "backend.seed_admin",
+        "documentation": {}
+    },
+    {
+        "label": "ADMIN_EMAIL",
+        "kind": 5,
+        "importPath": "backend.seed_admin",
+        "description": "backend.seed_admin",
+        "peekOfCode": "ADMIN_EMAIL = \"admin@society.com\"\nADMIN_PASSWORD = \"admin123\"\nexisting_admin = db.query(User).filter(\n    User.email == ADMIN_EMAIL\n).first()\nif existing_admin:\n    print(\"Admin already exists.\")\nelse:\n    admin = User(\n        name=\"Society Admin\",",
+        "detail": "backend.seed_admin",
+        "documentation": {}
+    },
+    {
+        "label": "ADMIN_PASSWORD",
+        "kind": 5,
+        "importPath": "backend.seed_admin",
+        "description": "backend.seed_admin",
+        "peekOfCode": "ADMIN_PASSWORD = \"admin123\"\nexisting_admin = db.query(User).filter(\n    User.email == ADMIN_EMAIL\n).first()\nif existing_admin:\n    print(\"Admin already exists.\")\nelse:\n    admin = User(\n        name=\"Society Admin\",\n        email=ADMIN_EMAIL,",
+        "detail": "backend.seed_admin",
+        "documentation": {}
+    },
+    {
+        "label": "existing_admin",
+        "kind": 5,
+        "importPath": "backend.seed_admin",
+        "description": "backend.seed_admin",
+        "peekOfCode": "existing_admin = db.query(User).filter(\n    User.email == ADMIN_EMAIL\n).first()\nif existing_admin:\n    print(\"Admin already exists.\")\nelse:\n    admin = User(\n        name=\"Society Admin\",\n        email=ADMIN_EMAIL,\n        password_hash=hash_password(ADMIN_PASSWORD),",
+        "detail": "backend.seed_admin",
+        "documentation": {}
+    }
+]
