@@ -1,7 +1,8 @@
 ﻿import { useEffect, useMemo, useState } from "react";
 import "./index.css";
 
-const API = "https://society-maintenance-tracker-28xu.onrender.com";
+const API =
+  "https://society-maintenance-tracker-28xu.onrender.com";
 
 const initialRecords = [
   {
@@ -58,47 +59,79 @@ function App() {
 
   const [user, setUser] = useState(() => {
     try {
-      return JSON.parse(localStorage.getItem("user")) || null;
+      return JSON.parse(
+        localStorage.getItem("user")
+      ) || null;
     } catch {
       return null;
     }
   });
 
-  const [email, setEmail] = useState("admin@society.com");
-  const [password, setPassword] = useState("admin123");
-  const [loginLoading, setLoginLoading] = useState(false);
-  const [loginError, setLoginError] = useState("");
+  const [checkingAuth, setCheckingAuth] =
+    useState(true);
 
-  const [page, setPage] = useState("Dashboard");
+  const [email, setEmail] = useState(
+    "admin@society.com"
+  );
 
-  const [records, setRecords] = useState(initialRecords);
-  const [search, setSearch] = useState("");
-  const [statusFilter, setStatusFilter] = useState("All");
-  const [month, setMonth] = useState("August 2026");
+  const [password, setPassword] =
+    useState("admin123");
 
-  const [showPaymentForm, setShowPaymentForm] = useState(false);
+  const [loginLoading, setLoginLoading] =
+    useState(false);
+
+  const [loginError, setLoginError] =
+    useState("");
+
+  const [page, setPage] =
+    useState("Dashboard");
+
+  const [records, setRecords] =
+    useState(initialRecords);
+
+  const [search, setSearch] =
+    useState("");
+
+  const [statusFilter, setStatusFilter] =
+    useState("All");
+
+  const [month, setMonth] =
+    useState("August 2026");
+
+  const [showPaymentForm, setShowPaymentForm] =
+    useState(false);
 
   const [flat, setFlat] = useState("");
   const [owner, setOwner] = useState("");
-  const [amount, setAmount] = useState("2500");
+  const [amount, setAmount] =
+    useState("2500");
+
   const [paymentMonth, setPaymentMonth] =
     useState("August 2026");
 
-  const [complaints, setComplaints] = useState([]);
-  const [complaintsLoading, setComplaintsLoading] = useState(false);
+  const [complaints, setComplaints] =
+    useState([]);
+
+  const [complaintsLoading, setComplaintsLoading] =
+    useState(false);
 
   const [showComplaintForm, setShowComplaintForm] =
     useState(false);
 
-  const [complaintFlat, setComplaintFlat] = useState("");
+  const [complaintFlat, setComplaintFlat] =
+    useState("");
+
   const [complaintCategory, setComplaintCategory] =
     useState("Plumbing");
+
   const [complaintDescription, setComplaintDescription] =
     useState("");
+
   const [complaintPriority, setComplaintPriority] =
     useState("Medium");
 
-  const [toast, setToast] = useState("");
+  const [toast, setToast] =
+    useState("");
 
   const notify = (message) => {
     setToast(message);
@@ -108,6 +141,86 @@ function App() {
     }, 2500);
   };
 
+  const clearAuth = () => {
+    localStorage.removeItem(
+      "access_token"
+    );
+
+    localStorage.removeItem("user");
+
+    setToken(null);
+    setUser(null);
+    setPage("Dashboard");
+  };
+
+  /*
+    IMPORTANT:
+    On refresh, check whether saved token is
+    actually valid.
+
+    If token is invalid/expired, remove it
+    and show login page.
+  */
+  useEffect(() => {
+    const verifyToken = async () => {
+      const savedToken =
+        localStorage.getItem(
+          "access_token"
+        );
+
+      if (!savedToken) {
+        setCheckingAuth(false);
+        return;
+      }
+
+      try {
+        const response = await fetch(
+          `${API}/auth/me`,
+          {
+            headers: {
+              Authorization: `Bearer ${savedToken}`,
+            },
+          }
+        );
+
+        if (!response.ok) {
+          clearAuth();
+          return;
+        }
+
+        const data =
+          await response.json();
+
+        if (data) {
+          setUser(data);
+
+          localStorage.setItem(
+            "user",
+            JSON.stringify(data)
+          );
+        }
+
+        setToken(savedToken);
+      } catch (error) {
+        console.error(
+          "Auth verification failed:",
+          error
+        );
+
+        /*
+          Don't immediately logout if backend
+          is temporarily waking up on Render.
+          Keep the existing token.
+        */
+        setToken(savedToken);
+      } finally {
+        setCheckingAuth(false);
+      }
+    };
+
+    verifyToken();
+  }, []);
+
   const login = async (event) => {
     event.preventDefault();
 
@@ -115,22 +228,43 @@ function App() {
     setLoginLoading(true);
 
     try {
-      const response = await fetch(`${API}/auth/login`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email,
-          password,
-        }),
-      });
+      const response = await fetch(
+        `${API}/auth/login`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type":
+              "application/json",
+          },
+          body: JSON.stringify({
+            email: email.trim(),
+            password,
+          }),
+        }
+      );
 
-      const data = await response.json();
+      const contentType =
+        response.headers.get(
+          "content-type"
+        ) || "";
+
+      const data =
+        contentType.includes(
+          "application/json"
+        )
+          ? await response.json()
+          : {};
 
       if (!response.ok) {
         throw new Error(
-          data.detail || "Invalid email or password"
+          data.detail ||
+            "Invalid email or password"
+        );
+      }
+
+      if (!data.access_token) {
+        throw new Error(
+          "Login successful but access token was not received."
         );
       }
 
@@ -146,12 +280,16 @@ function App() {
 
       setToken(data.access_token);
       setUser(data.user || {});
+      setPage("Dashboard");
 
       notify("Login successful");
     } catch (error) {
+      console.error(error);
+
       setLoginError(
-        error.message === "Failed to fetch"
-          ? "Backend is not running. Start the backend first."
+        error.message ===
+          "Failed to fetch"
+          ? "Backend is unavailable. Please wait a few seconds and try again."
           : error.message
       );
     } finally {
@@ -160,24 +298,26 @@ function App() {
   };
 
   const logout = () => {
-    localStorage.removeItem("access_token");
-    localStorage.removeItem("user");
-
-    setToken(null);
-    setUser(null);
-    setPage("Dashboard");
+    clearAuth();
+    notify("Logged out successfully");
   };
 
-  const apiRequest = async (endpoint, options = {}) => {
+  const apiRequest = async (
+    endpoint,
+    options = {}
+  ) => {
     const currentToken =
-      localStorage.getItem("access_token");
+      localStorage.getItem(
+        "access_token"
+      );
 
     const headers = {
       ...(options.headers || {}),
     };
 
     if (currentToken) {
-      headers.Authorization = `Bearer ${currentToken}`;
+      headers.Authorization =
+        `Bearer ${currentToken}`;
     }
 
     const response = await fetch(
@@ -188,17 +328,33 @@ function App() {
       }
     );
 
-    const contentType =
-      response.headers.get("content-type") || "";
+    if (
+      response.status === 401 ||
+      response.status === 403
+    ) {
+      clearAuth();
+      throw new Error(
+        "Session expired. Please login again."
+      );
+    }
 
-    const data = contentType.includes("application/json")
-      ? await response.json()
-      : await response.text();
+    const contentType =
+      response.headers.get(
+        "content-type"
+      ) || "";
+
+    const data =
+      contentType.includes(
+        "application/json"
+      )
+        ? await response.json()
+        : await response.text();
 
     if (!response.ok) {
       throw new Error(
         typeof data === "object"
-          ? data.detail || "Request failed"
+          ? data.detail ||
+              "Request failed"
           : "Request failed"
       );
     }
@@ -212,51 +368,76 @@ function App() {
     setComplaintsLoading(true);
 
     try {
-      const data = await apiRequest(
-        "/admin/complaints"
-      );
+      const data =
+        await apiRequest(
+          "/admin/complaints"
+        );
 
-      setComplaints(Array.isArray(data) ? data : []);
+      setComplaints(
+        Array.isArray(data)
+          ? data
+          : []
+      );
     } catch (error) {
       console.error(error);
+
+      if (
+        !error.message.includes(
+          "Session expired"
+        )
+      ) {
+        notify(error.message);
+      }
     } finally {
       setComplaintsLoading(false);
     }
   };
 
   useEffect(() => {
-    if (token && page === "Complaints") {
+    if (
+      token &&
+      page === "Complaints"
+    ) {
       loadComplaints();
     }
   }, [token, page]);
 
-  const filteredRecords = useMemo(() => {
-    return records.filter((record) => {
-      const text = search.toLowerCase();
+  const filteredRecords =
+    useMemo(() => {
+      return records.filter(
+        (record) => {
+          const text =
+            search.toLowerCase();
 
-      const matchesSearch =
-        record.flat.toLowerCase().includes(text) ||
-        record.owner.toLowerCase().includes(text);
+          const matchesSearch =
+            record.flat
+              .toLowerCase()
+              .includes(text) ||
+            record.owner
+              .toLowerCase()
+              .includes(text);
 
-      const matchesStatus =
-        statusFilter === "All" ||
-        record.status === statusFilter;
+          const matchesStatus =
+            statusFilter === "All" ||
+            record.status ===
+              statusFilter;
 
-      const matchesMonth =
-        record.month === month;
+          const matchesMonth =
+            record.month === month;
 
-      return (
-        matchesSearch &&
-        matchesStatus &&
-        matchesMonth
+          return (
+            matchesSearch &&
+            matchesStatus &&
+            matchesMonth
+          );
+        }
       );
-    });
-  }, [
-    records,
-    search,
-    statusFilter,
-    month,
-  ]);
+    }, [
+      records,
+      search,
+      statusFilter,
+      month,
+    ]);
 
   const total = records.length;
 
@@ -277,17 +458,23 @@ function App() {
 
   const totalCollected =
     records
-      .filter((r) => r.status === "Paid")
+      .filter(
+        (r) => r.status === "Paid"
+      )
       .reduce(
-        (sum, r) => sum + Number(r.amount),
+        (sum, r) =>
+          sum + Number(r.amount),
         0
       );
 
   const outstanding =
     records
-      .filter((r) => r.status !== "Paid")
+      .filter(
+        (r) => r.status !== "Paid"
+      )
       .reduce(
-        (sum, r) => sum + Number(r.amount),
+        (sum, r) =>
+          sum + Number(r.amount),
         0
       );
 
@@ -304,7 +491,9 @@ function App() {
       )
     );
 
-    notify("Payment marked as Paid");
+    notify(
+      "Payment marked as Paid"
+    );
   };
 
   const savePayment = () => {
@@ -313,7 +502,9 @@ function App() {
       !owner.trim() ||
       !amount
     ) {
-      notify("Please fill all payment details");
+      notify(
+        "Please fill all payment details"
+      );
       return;
     }
 
@@ -335,14 +526,18 @@ function App() {
     setFlat("");
     setOwner("");
     setAmount("2500");
-    setPaymentMonth("August 2026");
+    setPaymentMonth(
+      "August 2026"
+    );
 
     setShowPaymentForm(false);
 
     setMonth(paymentMonth);
     setStatusFilter("All");
 
-    notify("Payment added as Pending");
+    notify(
+      "Payment added as Pending"
+    );
   };
 
   const saveComplaint = async () => {
@@ -350,12 +545,15 @@ function App() {
       !complaintCategory ||
       !complaintDescription.trim()
     ) {
-      notify("Please fill complaint details");
+      notify(
+        "Please fill complaint details"
+      );
       return;
     }
 
     try {
-      const formData = new FormData();
+      const formData =
+        new FormData();
 
       formData.append(
         "category",
@@ -367,55 +565,97 @@ function App() {
         complaintDescription.trim()
       );
 
-      await apiRequest("/complaints", {
-        method: "POST",
-        body: formData,
-      });
-
-      setComplaintFlat("");
-      setComplaintCategory("Plumbing");
-      setComplaintDescription("");
-      setComplaintPriority("Medium");
-
-      setShowComplaintForm(false);
-
-      notify("Complaint created successfully");
-
-      await loadComplaints();
-    } catch (error) {
-      notify(error.message);
-    }
-  };
-
-  const resolveComplaint = async (id) => {
-    try {
       await apiRequest(
-        `/admin/complaints/${id}`,
+        "/complaints",
         {
-          method: "PATCH",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            status: "Resolved",
-            priority: "Medium",
-            note: "Complaint resolved by society admin.",
-          }),
+          method: "POST",
+          body: formData,
         }
       );
 
-      notify("Complaint resolved");
+      setComplaintFlat("");
+      setComplaintCategory(
+        "Plumbing"
+      );
+      setComplaintDescription("");
+      setComplaintPriority(
+        "Medium"
+      );
+
+      setShowComplaintForm(false);
+
+      notify(
+        "Complaint created successfully"
+      );
+
       await loadComplaints();
     } catch (error) {
       notify(error.message);
     }
   };
 
+  const resolveComplaint =
+    async (id) => {
+      try {
+        await apiRequest(
+          `/admin/complaints/${id}`,
+          {
+            method: "PATCH",
+            headers: {
+              "Content-Type":
+                "application/json",
+            },
+            body: JSON.stringify({
+              status: "Resolved",
+              priority: "Medium",
+              note:
+                "Complaint resolved by society admin.",
+            }),
+          }
+        );
+
+        notify(
+          "Complaint resolved"
+        );
+
+        await loadComplaints();
+      } catch (error) {
+        notify(error.message);
+      }
+    };
+
+  /*
+    While token validation is happening,
+    don't render dashboard.
+  */
+  if (checkingAuth) {
+    return (
+      <div className="login-page">
+        <div className="login-card">
+          <div className="login-logo">
+            🏢
+          </div>
+
+          <h1>SocietyTrack</h1>
+
+          <p className="login-subtitle">
+            Checking session...
+          </p>
+        </div>
+      </div>
+    );
+  }
+
+  /*
+    NO TOKEN = LOGIN PAGE
+  */
   if (!token) {
     return (
       <div className="login-page">
         <div className="login-card">
-          <div className="login-logo">🏢</div>
+          <div className="login-logo">
+            🏢
+          </div>
 
           <h1>SocietyTrack</h1>
 
@@ -430,9 +670,13 @@ function App() {
               type="email"
               value={email}
               onChange={(e) =>
-                setEmail(e.target.value)
+                setEmail(
+                  e.target.value
+                )
               }
               placeholder="admin@society.com"
+              autoComplete="username"
+              required
             />
 
             <label>Password</label>
@@ -441,9 +685,13 @@ function App() {
               type="password"
               value={password}
               onChange={(e) =>
-                setPassword(e.target.value)
+                setPassword(
+                  e.target.value
+                )
               }
               placeholder="Enter password"
+              autoComplete="current-password"
+              required
             />
 
             {loginError && (
@@ -464,9 +712,17 @@ function App() {
           </form>
 
           <div className="demo-box">
-            <strong>Admin Demo</strong>
-            <span>admin@society.com</span>
-            <span>admin123</span>
+            <strong>
+              Admin Demo
+            </strong>
+
+            <span>
+              admin@society.com
+            </span>
+
+            <span>
+              admin123
+            </span>
           </div>
         </div>
       </div>
@@ -477,11 +733,18 @@ function App() {
     <div className="app">
       <aside className="sidebar">
         <div className="brand">
-          <div className="brand-icon">🏢</div>
+          <div className="brand-icon">
+            🏢
+          </div>
 
           <div>
-            <h2>SocietyTrack</h2>
-            <span>Maintenance Manager</span>
+            <h2>
+              SocietyTrack
+            </h2>
+
+            <span>
+              Maintenance Manager
+            </span>
           </div>
         </div>
 
@@ -492,18 +755,27 @@ function App() {
             ["Complaints", "⚠"],
             ["Residents", "👥"],
             ["Reports", "▥"],
-          ].map(([name, icon]) => (
-            <button
-              key={name}
-              className={`nav-item ${
-                page === name ? "active" : ""
-              }`}
-              onClick={() => setPage(name)}
-            >
-              <span>{icon}</span>
-              {name}
-            </button>
-          ))}
+          ].map(
+            ([name, icon]) => (
+              <button
+                key={name}
+                className={`nav-item ${
+                  page === name
+                    ? "active"
+                    : ""
+                }`}
+                onClick={() =>
+                  setPage(name)
+                }
+              >
+                <span>
+                  {icon}
+                </span>
+
+                {name}
+              </button>
+            )
+          )}
         </nav>
 
         <div className="sidebar-bottom">
@@ -511,7 +783,10 @@ function App() {
             <strong>
               Green Valley Society
             </strong>
-            <span>120 Apartments</span>
+
+            <span>
+              120 Apartments
+            </span>
           </div>
 
           <button
@@ -540,24 +815,29 @@ function App() {
 
           <div className="profile">
             <div className="avatar">
-              {(user?.name || "A")
+              {(
+                user?.name || "A"
+              )
                 .charAt(0)
                 .toUpperCase()}
             </div>
 
             <div>
               <strong>
-                {user?.name || "Society Admin"}
+                {user?.name ||
+                  "Society Admin"}
               </strong>
 
               <span>
-                {user?.role || "Administrator"}
+                {user?.role ||
+                  "Administrator"}
               </span>
             </div>
           </div>
         </header>
 
-        {page === "Dashboard" && (
+        {page ===
+          "Dashboard" && (
           <>
             <section className="summary-grid">
               <div className="summary-card">
@@ -566,8 +846,14 @@ function App() {
                 </div>
 
                 <div>
-                  <span>Total Flats</span>
-                  <strong>{total}</strong>
+                  <span>
+                    Total Flats
+                  </span>
+
+                  <strong>
+                    {total}
+                  </strong>
+
                   <small>
                     Registered apartments
                   </small>
@@ -581,7 +867,11 @@ function App() {
 
                 <div>
                   <span>Paid</span>
-                  <strong>{paid}</strong>
+
+                  <strong>
+                    {paid}
+                  </strong>
+
                   <small>
                     Payments received
                   </small>
@@ -594,8 +884,14 @@ function App() {
                 </div>
 
                 <div>
-                  <span>Pending</span>
-                  <strong>{pending}</strong>
+                  <span>
+                    Pending
+                  </span>
+
+                  <strong>
+                    {pending}
+                  </strong>
+
                   <small>
                     Awaiting payment
                   </small>
@@ -608,8 +904,14 @@ function App() {
                 </div>
 
                 <div>
-                  <span>Overdue</span>
-                  <strong>{overdue}</strong>
+                  <span>
+                    Overdue
+                  </span>
+
+                  <strong>
+                    {overdue}
+                  </strong>
+
                   <small>
                     Require attention
                   </small>
@@ -633,7 +935,9 @@ function App() {
                 <button
                   className="primary-btn"
                   onClick={() =>
-                    setShowPaymentForm(true)
+                    setShowPaymentForm(
+                      true
+                    )
                   }
                 >
                   + Add Payment
@@ -648,7 +952,9 @@ function App() {
                     placeholder="Search flat or owner..."
                     value={search}
                     onChange={(e) =>
-                      setSearch(e.target.value)
+                      setSearch(
+                        e.target.value
+                      )
                     }
                   />
                 </div>
@@ -656,24 +962,49 @@ function App() {
                 <select
                   value={month}
                   onChange={(e) =>
-                    setMonth(e.target.value)
+                    setMonth(
+                      e.target.value
+                    )
                   }
                 >
-                  <option>August 2026</option>
-                  <option>July 2026</option>
-                  <option>June 2026</option>
+                  <option>
+                    August 2026
+                  </option>
+
+                  <option>
+                    July 2026
+                  </option>
+
+                  <option>
+                    June 2026
+                  </option>
                 </select>
 
                 <select
-                  value={statusFilter}
+                  value={
+                    statusFilter
+                  }
                   onChange={(e) =>
-                    setStatusFilter(e.target.value)
+                    setStatusFilter(
+                      e.target.value
+                    )
                   }
                 >
-                  <option>All</option>
-                  <option>Paid</option>
-                  <option>Pending</option>
-                  <option>Overdue</option>
+                  <option>
+                    All
+                  </option>
+
+                  <option>
+                    Paid
+                  </option>
+
+                  <option>
+                    Pending
+                  </option>
+
+                  <option>
+                    Overdue
+                  </option>
                 </select>
               </div>
 
@@ -694,16 +1025,30 @@ function App() {
                   <tbody>
                     {filteredRecords.map(
                       (record) => (
-                        <tr key={record.id}>
+                        <tr
+                          key={
+                            record.id
+                          }
+                        >
                           <td>
                             <strong>
-                              {record.flat}
+                              {
+                                record.flat
+                              }
                             </strong>
                           </td>
 
-                          <td>{record.owner}</td>
+                          <td>
+                            {
+                              record.owner
+                            }
+                          </td>
 
-                          <td>{record.month}</td>
+                          <td>
+                            {
+                              record.month
+                            }
+                          </td>
 
                           <td>
                             ₹
@@ -716,12 +1061,16 @@ function App() {
                             <span
                               className={`status ${record.status.toLowerCase()}`}
                             >
-                              {record.status}
+                              {
+                                record.status
+                              }
                             </span>
                           </td>
 
                           <td>
-                            {record.paidOn}
+                            {
+                              record.paidOn
+                            }
                           </td>
 
                           <td>
@@ -753,37 +1102,51 @@ function App() {
 
             <section className="bottom-grid">
               <div className="info-card">
-                <span>Total Expected</span>
+                <span>
+                  Total Expected
+                </span>
+
                 <strong>
                   ₹
                   {totalExpected.toLocaleString(
                     "en-IN"
                   )}
                 </strong>
-                <small>Current month</small>
+
+                <small>
+                  Current month
+                </small>
               </div>
 
               <div className="info-card">
-                <span>Total Collected</span>
+                <span>
+                  Total Collected
+                </span>
+
                 <strong>
                   ₹
                   {totalCollected.toLocaleString(
                     "en-IN"
                   )}
                 </strong>
+
                 <small>
                   {paid} payments received
                 </small>
               </div>
 
               <div className="info-card">
-                <span>Outstanding</span>
+                <span>
+                  Outstanding
+                </span>
+
                 <strong>
                   ₹
                   {outstanding.toLocaleString(
                     "en-IN"
                   )}
                 </strong>
+
                 <small>
                   Pending + overdue
                 </small>
@@ -792,13 +1155,15 @@ function App() {
           </>
         )}
 
-        {page === "Maintenance" && (
+        {page ===
+          "Maintenance" && (
           <section className="content-card">
             <div className="section-header">
               <div>
                 <h2>
                   Maintenance Management
                 </h2>
+
                 <p>
                   Track monthly society
                   maintenance payments.
@@ -808,7 +1173,9 @@ function App() {
               <button
                 className="primary-btn"
                 onClick={() =>
-                  setShowPaymentForm(true)
+                  setShowPaymentForm(
+                    true
+                  )
                 }
               >
                 + Add Payment
@@ -823,7 +1190,10 @@ function App() {
                     "en-IN"
                   )}
                 </strong>
-                <span>Total Collected</span>
+
+                <span>
+                  Total Collected
+                </span>
               </div>
 
               <div>
@@ -833,17 +1203,30 @@ function App() {
                     "en-IN"
                   )}
                 </strong>
-                <span>Outstanding</span>
+
+                <span>
+                  Outstanding
+                </span>
               </div>
 
               <div>
-                <strong>{pending}</strong>
-                <span>Pending Payments</span>
+                <strong>
+                  {pending}
+                </strong>
+
+                <span>
+                  Pending Payments
+                </span>
               </div>
 
               <div>
-                <strong>{overdue}</strong>
-                <span>Overdue Payments</span>
+                <strong>
+                  {overdue}
+                </strong>
+
+                <span>
+                  Overdue Payments
+                </span>
               </div>
             </div>
 
@@ -858,7 +1241,8 @@ function App() {
           </section>
         )}
 
-        {page === "Complaints" && (
+        {page ===
+          "Complaints" && (
           <section className="content-card">
             <div className="section-header">
               <div>
@@ -866,7 +1250,9 @@ function App() {
                   SERVICE REQUESTS
                 </p>
 
-                <h2>Complaints</h2>
+                <h2>
+                  Complaints
+                </h2>
 
                 <p>
                   Manage resident complaints
@@ -877,7 +1263,9 @@ function App() {
               <button
                 className="primary-btn"
                 onClick={() =>
-                  setShowComplaintForm(true)
+                  setShowComplaintForm(
+                    true
+                  )
                 }
               >
                 + New Complaint
@@ -908,7 +1296,8 @@ function App() {
                         Loading complaints...
                       </td>
                     </tr>
-                  ) : complaints.length === 0 ? (
+                  ) : complaints.length ===
+                    0 ? (
                     <tr>
                       <td
                         colSpan="7"
@@ -921,11 +1310,14 @@ function App() {
                     complaints.map(
                       (complaint) => {
                         const status =
-                          complaint.status || "Open";
+                          complaint.status ||
+                          "Open";
 
                         return (
                           <tr
-                            key={complaint.id}
+                            key={
+                              complaint.id
+                            }
                           >
                             <td>
                               <strong>
@@ -1001,11 +1393,14 @@ function App() {
           </section>
         )}
 
-        {page === "Residents" && (
+        {page ===
+          "Residents" && (
           <section className="content-card">
             <div className="section-header">
               <div>
-                <h2>Residents</h2>
+                <h2>
+                  Residents
+                </h2>
 
                 <p>
                   Society resident overview.
@@ -1015,26 +1410,53 @@ function App() {
 
             <div className="resident-grid">
               {[
-                ["A-101", "Rahul Sharma"],
-                ["A-102", "Priya Verma"],
-                ["A-103", "Amit Kumar"],
-                ["A-104", "Neha Singh"],
-                ["A-105", "Rohit Gupta"],
+                [
+                  "A-101",
+                  "Rahul Sharma",
+                ],
+                [
+                  "A-102",
+                  "Priya Verma",
+                ],
+                [
+                  "A-103",
+                  "Amit Kumar",
+                ],
+                [
+                  "A-104",
+                  "Neha Singh",
+                ],
+                [
+                  "A-105",
+                  "Rohit Gupta",
+                ],
               ].map(
-                ([flatNumber, name]) => (
+                ([
+                  flatNumber,
+                  name,
+                ]) => (
                   <div
                     className="resident-card"
-                    key={flatNumber}
+                    key={
+                      flatNumber
+                    }
                   >
                     <div className="resident-avatar">
-                      {name.charAt(0)}
+                      {name.charAt(
+                        0
+                      )}
                     </div>
 
                     <div>
-                      <strong>{name}</strong>
+                      <strong>
+                        {name}
+                      </strong>
 
                       <span>
-                        Flat {flatNumber}
+                        Flat{" "}
+                        {
+                          flatNumber
+                        }
                       </span>
                     </div>
                   </div>
@@ -1044,7 +1466,8 @@ function App() {
           </section>
         )}
 
-        {page === "Reports" && (
+        {page ===
+          "Reports" && (
           <section className="content-card">
             <div className="section-header">
               <div>
@@ -1052,7 +1475,9 @@ function App() {
                   ANALYTICS
                 </p>
 
-                <h2>Society Reports</h2>
+                <h2>
+                  Society Reports
+                </h2>
 
                 <p>
                   Current maintenance
@@ -1063,7 +1488,10 @@ function App() {
 
             <div className="report-list">
               <div>
-                <span>Total Expected</span>
+                <span>
+                  Total Expected
+                </span>
+
                 <strong>
                   ₹
                   {totalExpected.toLocaleString(
@@ -1073,7 +1501,10 @@ function App() {
               </div>
 
               <div>
-                <span>Total Collected</span>
+                <span>
+                  Total Collected
+                </span>
+
                 <strong>
                   ₹
                   {totalCollected.toLocaleString(
@@ -1083,7 +1514,10 @@ function App() {
               </div>
 
               <div>
-                <span>Outstanding</span>
+                <span>
+                  Outstanding
+                </span>
+
                 <strong>
                   ₹
                   {outstanding.toLocaleString(
@@ -1093,12 +1527,16 @@ function App() {
               </div>
 
               <div>
-                <span>Collection Rate</span>
+                <span>
+                  Collection Rate
+                </span>
 
                 <strong>
                   {total
                     ? Math.round(
-                        (paid / total) * 100
+                        (paid /
+                          total) *
+                          100
                       )
                     : 0}
                   %
@@ -1113,7 +1551,9 @@ function App() {
         <div
           className="modal-overlay"
           onClick={() =>
-            setShowPaymentForm(false)
+            setShowPaymentForm(
+              false
+            )
           }
         >
           <div
@@ -1137,63 +1577,91 @@ function App() {
               <button
                 className="close-btn"
                 onClick={() =>
-                  setShowPaymentForm(false)
+                  setShowPaymentForm(
+                    false
+                  )
                 }
               >
                 ×
               </button>
             </div>
 
-            <label>Flat Number</label>
+            <label>
+              Flat Number
+            </label>
 
             <input
               value={flat}
               onChange={(e) =>
-                setFlat(e.target.value)
+                setFlat(
+                  e.target.value
+                )
               }
               placeholder="Example: A-106"
             />
 
-            <label>Owner Name</label>
+            <label>
+              Owner Name
+            </label>
 
             <input
               value={owner}
               onChange={(e) =>
-                setOwner(e.target.value)
+                setOwner(
+                  e.target.value
+                )
               }
               placeholder="Enter owner name"
             />
 
-            <label>Amount</label>
+            <label>
+              Amount
+            </label>
 
             <input
               type="number"
               value={amount}
               onChange={(e) =>
-                setAmount(e.target.value)
+                setAmount(
+                  e.target.value
+                )
               }
             />
 
-            <label>Month</label>
+            <label>
+              Month
+            </label>
 
             <select
-              value={paymentMonth}
+              value={
+                paymentMonth
+              }
               onChange={(e) =>
                 setPaymentMonth(
                   e.target.value
                 )
               }
             >
-              <option>August 2026</option>
-              <option>July 2026</option>
-              <option>June 2026</option>
+              <option>
+                August 2026
+              </option>
+
+              <option>
+                July 2026
+              </option>
+
+              <option>
+                June 2026
+              </option>
             </select>
 
             <div className="modal-actions">
               <button
                 className="secondary-btn"
                 onClick={() =>
-                  setShowPaymentForm(false)
+                  setShowPaymentForm(
+                    false
+                  )
                 }
               >
                 Cancel
@@ -1201,7 +1669,9 @@ function App() {
 
               <button
                 className="primary-btn"
-                onClick={savePayment}
+                onClick={
+                  savePayment
+                }
               >
                 Save Payment
               </button>
@@ -1214,7 +1684,9 @@ function App() {
         <div
           className="modal-overlay"
           onClick={() =>
-            setShowComplaintForm(false)
+            setShowComplaintForm(
+              false
+            )
           }
         >
           <div
@@ -1225,7 +1697,9 @@ function App() {
           >
             <div className="modal-header">
               <div>
-                <h2>New Complaint</h2>
+                <h2>
+                  New Complaint
+                </h2>
 
                 <p>
                   Create a resident complaint.
@@ -1235,17 +1709,23 @@ function App() {
               <button
                 className="close-btn"
                 onClick={() =>
-                  setShowComplaintForm(false)
+                  setShowComplaintForm(
+                    false
+                  )
                 }
               >
                 ×
               </button>
             </div>
 
-            <label>Flat Number</label>
+            <label>
+              Flat Number
+            </label>
 
             <input
-              value={complaintFlat}
+              value={
+                complaintFlat
+              }
               onChange={(e) =>
                 setComplaintFlat(
                   e.target.value
@@ -1254,35 +1734,61 @@ function App() {
               placeholder="Example: A-106"
             />
 
-            <label>Resident Name</label>
+            <label>
+              Resident Name
+            </label>
 
             <input
-              value={user?.name || ""}
+              value={
+                user?.name || ""
+              }
               readOnly
               placeholder="Resident name"
             />
 
-            <label>Category</label>
+            <label>
+              Category
+            </label>
 
             <select
-              value={complaintCategory}
+              value={
+                complaintCategory
+              }
               onChange={(e) =>
                 setComplaintCategory(
                   e.target.value
                 )
               }
             >
-              <option>Plumbing</option>
-              <option>Electricity</option>
-              <option>Cleaning</option>
-              <option>Security</option>
-              <option>Other</option>
+              <option>
+                Plumbing
+              </option>
+
+              <option>
+                Electricity
+              </option>
+
+              <option>
+                Cleaning
+              </option>
+
+              <option>
+                Security
+              </option>
+
+              <option>
+                Other
+              </option>
             </select>
 
-            <label>Description</label>
+            <label>
+              Description
+            </label>
 
             <textarea
-              value={complaintDescription}
+              value={
+                complaintDescription
+              }
               onChange={(e) =>
                 setComplaintDescription(
                   e.target.value
@@ -1292,26 +1798,40 @@ function App() {
               rows="4"
             />
 
-            <label>Priority</label>
+            <label>
+              Priority
+            </label>
 
             <select
-              value={complaintPriority}
+              value={
+                complaintPriority
+              }
               onChange={(e) =>
                 setComplaintPriority(
                   e.target.value
                 )
               }
             >
-              <option>Low</option>
-              <option>Medium</option>
-              <option>High</option>
+              <option>
+                Low
+              </option>
+
+              <option>
+                Medium
+              </option>
+
+              <option>
+                High
+              </option>
             </select>
 
             <div className="modal-actions">
               <button
                 className="secondary-btn"
                 onClick={() =>
-                  setShowComplaintForm(false)
+                  setShowComplaintForm(
+                    false
+                  )
                 }
               >
                 Cancel
@@ -1319,7 +1839,9 @@ function App() {
 
               <button
                 className="primary-btn"
-                onClick={saveComplaint}
+                onClick={
+                  saveComplaint
+                }
               >
                 Save Complaint
               </button>
@@ -1338,4 +1860,3 @@ function App() {
 }
 
 export default App;
-
