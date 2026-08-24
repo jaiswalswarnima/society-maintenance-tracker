@@ -53,20 +53,7 @@ app = FastAPI(
     description="Apartment society complaint and maintenance management system",
     version="1.0.0",
 )
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=[
-        "http://127.0.0.1:5173",
-        "http://127.0.0.1:5174",
-        "http://127.0.0.1:5175",
-        "http://localhost:5173",
-        "http://localhost:5174",
-        "http://localhost:5175",
-    ],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
+
 
 # ============================================================
 # UPLOAD DIRECTORY
@@ -293,7 +280,7 @@ def get_me(
 
 @app.get("/resident/test")
 def resident_test(
-    current_user: User = Depends(get_current_user),
+    current_user: User = Depends(require_resident),
 ):
     return {
         "message": "Resident access successful",
@@ -320,7 +307,7 @@ async def create_complaint(
     category: str = Form(...),
     description: str = Form(...),
     photo: UploadFile | None = File(default=None),
-    current_user: User = Depends(get_current_user),
+    current_user: User = Depends(require_resident),
     db: Session = Depends(get_db),
 ):
     if not category.strip():
@@ -435,7 +422,7 @@ async def create_complaint(
 
 @app.get("/complaints/my")
 def get_my_complaints(
-    current_user: User = Depends(get_current_user),
+    current_user: User = Depends(require_resident),
     db: Session = Depends(get_db),
 ):
     complaints = (
