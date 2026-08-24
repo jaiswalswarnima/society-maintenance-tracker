@@ -415,9 +415,7 @@ function App() {
     return (
       <div className="login-page">
         <div className="login-card">
-          <div className="login-logo">
-            ðŸ¢
-          </div>
+          <div className="login-logo">🏢</div>
 
           <h1>SocietyTrack</h1>
 
@@ -467,9 +465,7 @@ function App() {
 
           <div className="demo-box">
             <strong>Admin Demo</strong>
-            <span>
-              admin@society.com
-            </span>
+            <span>admin@society.com</span>
             <span>admin123</span>
           </div>
         </div>
@@ -481,36 +477,28 @@ function App() {
     <div className="app">
       <aside className="sidebar">
         <div className="brand">
-          <div className="brand-icon">
-            ðŸ¢
-          </div>
+          <div className="brand-icon">🏢</div>
 
           <div>
             <h2>SocietyTrack</h2>
-            <span>
-              Maintenance Manager
-            </span>
+            <span>Maintenance Manager</span>
           </div>
         </div>
 
         <nav className="nav">
           {[
-            ["Dashboard", "âŒ‚"],
-            ["Maintenance", "â‚¹"],
-            ["Complaints", "âš "],
-            ["Residents", "ðŸ‘¥"],
-            ["Reports", "â–¥"],
+            ["Dashboard", "⌂"],
+            ["Maintenance", "₹"],
+            ["Complaints", "⚠"],
+            ["Residents", "👥"],
+            ["Reports", "▥"],
           ].map(([name, icon]) => (
             <button
               key={name}
               className={`nav-item ${
-                page === name
-                  ? "active"
-                  : ""
+                page === name ? "active" : ""
               }`}
-              onClick={() =>
-                setPage(name)
-              }
+              onClick={() => setPage(name)}
             >
               <span>{icon}</span>
               {name}
@@ -523,16 +511,14 @@ function App() {
             <strong>
               Green Valley Society
             </strong>
-            <span>
-              120 Apartments
-            </span>
+            <span>120 Apartments</span>
           </div>
 
           <button
             className="logout"
             onClick={logout}
           >
-            â†ª Logout
+            ↪ Logout
           </button>
         </div>
       </aside>
@@ -561,13 +547,11 @@ function App() {
 
             <div>
               <strong>
-                {user?.name ||
-                  "Society Admin"}
+                {user?.name || "Society Admin"}
               </strong>
 
               <span>
-                {user?.role ||
-                  "Administrator"}
+                {user?.role || "Administrator"}
               </span>
             </div>
           </div>
@@ -578,7 +562,7 @@ function App() {
             <section className="summary-grid">
               <div className="summary-card">
                 <div className="card-icon blue">
-                  ðŸ¢
+                  🏢
                 </div>
 
                 <div>
@@ -592,7 +576,7 @@ function App() {
 
               <div className="summary-card">
                 <div className="card-icon green">
-                  âœ“
+                  ✓
                 </div>
 
                 <div>
@@ -606,7 +590,7 @@ function App() {
 
               <div className="summary-card">
                 <div className="card-icon orange">
-                  â—·
+                  ◷
                 </div>
 
                 <div>
@@ -658,15 +642,13 @@ function App() {
 
               <div className="filters">
                 <div className="search-box">
-                  ðŸ”
+                  🔍
 
                   <input
                     placeholder="Search flat or owner..."
                     value={search}
                     onChange={(e) =>
-                      setSearch(
-                        e.target.value
-                      )
+                      setSearch(e.target.value)
                     }
                   />
                 </div>
@@ -674,28 +656,18 @@ function App() {
                 <select
                   value={month}
                   onChange={(e) =>
-                    setMonth(
-                      e.target.value
-                    )
+                    setMonth(e.target.value)
                   }
                 >
-                  <option>
-                    August 2026
-                  </option>
-                  <option>
-                    July 2026
-                  </option>
-                  <option>
-                    June 2026
-                  </option>
+                  <option>August 2026</option>
+                  <option>July 2026</option>
+                  <option>June 2026</option>
                 </select>
 
                 <select
                   value={statusFilter}
                   onChange={(e) =>
-                    setStatusFilter(
-                      e.target.value
-                    )
+                    setStatusFilter(e.target.value)
                   }
                 >
                   <option>All</option>
@@ -722,25 +694,19 @@ function App() {
                   <tbody>
                     {filteredRecords.map(
                       (record) => (
-                        <tr
-                          key={record.id}
-                        >
+                        <tr key={record.id}>
                           <td>
                             <strong>
                               {record.flat}
                             </strong>
                           </td>
 
-                          <td>
-                            {record.owner}
-                          </td>
+                          <td>{record.owner}</td>
+
+                          <td>{record.month}</td>
 
                           <td>
-                            {record.month}
-                          </td>
-
-                          <td>
-                            â‚¹
+                            ₹
                             {record.amount.toLocaleString(
                               "en-IN"
                             )}
@@ -773,7 +739,7 @@ function App() {
                               </button>
                             ) : (
                               <span className="completed">
-                                âœ“ Completed
+                                ✓ Completed
                               </span>
                             )}
                           </td>
@@ -787,26 +753,20 @@ function App() {
 
             <section className="bottom-grid">
               <div className="info-card">
-                <span>
-                  Total Expected
-                </span>
+                <span>Total Expected</span>
                 <strong>
-                  â‚¹
+                  ₹
                   {totalExpected.toLocaleString(
                     "en-IN"
                   )}
                 </strong>
-                <small>
-                  Current month
-                </small>
+                <small>Current month</small>
               </div>
 
               <div className="info-card">
-                <span>
-                  Total Collected
-                </span>
+                <span>Total Collected</span>
                 <strong>
-                  â‚¹
+                  ₹
                   {totalCollected.toLocaleString(
                     "en-IN"
                   )}
@@ -817,11 +777,9 @@ function App() {
               </div>
 
               <div className="info-card">
-                <span>
-                  Outstanding
-                </span>
+                <span>Outstanding</span>
                 <strong>
-                  â‚¹
+                  ₹
                   {outstanding.toLocaleString(
                     "en-IN"
                   )}
@@ -860,40 +818,32 @@ function App() {
             <div className="feature-grid">
               <div>
                 <strong>
-                  â‚¹
+                  ₹
                   {totalCollected.toLocaleString(
                     "en-IN"
                   )}
                 </strong>
-                <span>
-                  Total Collected
-                </span>
+                <span>Total Collected</span>
               </div>
 
               <div>
                 <strong>
-                  â‚¹
+                  ₹
                   {outstanding.toLocaleString(
                     "en-IN"
                   )}
                 </strong>
-                <span>
-                  Outstanding
-                </span>
+                <span>Outstanding</span>
               </div>
 
               <div>
                 <strong>{pending}</strong>
-                <span>
-                  Pending Payments
-                </span>
+                <span>Pending Payments</span>
               </div>
 
               <div>
                 <strong>{overdue}</strong>
-                <span>
-                  Overdue Payments
-                </span>
+                <span>Overdue Payments</span>
               </div>
             </div>
 
@@ -958,8 +908,7 @@ function App() {
                         Loading complaints...
                       </td>
                     </tr>
-                  ) : complaints.length ===
-                    0 ? (
+                  ) : complaints.length === 0 ? (
                     <tr>
                       <td
                         colSpan="7"
@@ -972,14 +921,11 @@ function App() {
                     complaints.map(
                       (complaint) => {
                         const status =
-                          complaint.status ||
-                          "Open";
+                          complaint.status || "Open";
 
                         return (
                           <tr
-                            key={
-                              complaint.id
-                            }
+                            key={complaint.id}
                           >
                             <td>
                               <strong>
@@ -1029,7 +975,7 @@ function App() {
                               ).toLowerCase() ===
                               "resolved" ? (
                                 <span className="completed">
-                                  âœ“ Resolved
+                                  ✓ Resolved
                                 </span>
                               ) : (
                                 <button
@@ -1059,9 +1005,7 @@ function App() {
           <section className="content-card">
             <div className="section-header">
               <div>
-                <h2>
-                  Residents
-                </h2>
+                <h2>Residents</h2>
 
                 <p>
                   Society resident overview.
@@ -1087,9 +1031,7 @@ function App() {
                     </div>
 
                     <div>
-                      <strong>
-                        {name}
-                      </strong>
+                      <strong>{name}</strong>
 
                       <span>
                         Flat {flatNumber}
@@ -1110,9 +1052,7 @@ function App() {
                   ANALYTICS
                 </p>
 
-                <h2>
-                  Society Reports
-                </h2>
+                <h2>Society Reports</h2>
 
                 <p>
                   Current maintenance
@@ -1123,11 +1063,9 @@ function App() {
 
             <div className="report-list">
               <div>
-                <span>
-                  Total Expected
-                </span>
+                <span>Total Expected</span>
                 <strong>
-                  â‚¹
+                  ₹
                   {totalExpected.toLocaleString(
                     "en-IN"
                   )}
@@ -1135,11 +1073,9 @@ function App() {
               </div>
 
               <div>
-                <span>
-                  Total Collected
-                </span>
+                <span>Total Collected</span>
                 <strong>
-                  â‚¹
+                  ₹
                   {totalCollected.toLocaleString(
                     "en-IN"
                   )}
@@ -1147,11 +1083,9 @@ function App() {
               </div>
 
               <div>
-                <span>
-                  Outstanding
-                </span>
+                <span>Outstanding</span>
                 <strong>
-                  â‚¹
+                  ₹
                   {outstanding.toLocaleString(
                     "en-IN"
                   )}
@@ -1159,15 +1093,12 @@ function App() {
               </div>
 
               <div>
-                <span>
-                  Collection Rate
-                </span>
+                <span>Collection Rate</span>
 
                 <strong>
                   {total
                     ? Math.round(
-                        (paid / total) *
-                          100
+                        (paid / total) * 100
                       )
                     : 0}
                   %
@@ -1209,7 +1140,7 @@ function App() {
                   setShowPaymentForm(false)
                 }
               >
-                Ã—
+                ×
               </button>
             </div>
 
@@ -1253,15 +1184,9 @@ function App() {
                 )
               }
             >
-              <option>
-                August 2026
-              </option>
-              <option>
-                July 2026
-              </option>
-              <option>
-                June 2026
-              </option>
+              <option>August 2026</option>
+              <option>July 2026</option>
+              <option>June 2026</option>
             </select>
 
             <div className="modal-actions">
@@ -1300,9 +1225,7 @@ function App() {
           >
             <div className="modal-header">
               <div>
-                <h2>
-                  New Complaint
-                </h2>
+                <h2>New Complaint</h2>
 
                 <p>
                   Create a resident complaint.
@@ -1315,7 +1238,7 @@ function App() {
                   setShowComplaintForm(false)
                 }
               >
-                Ã—
+                ×
               </button>
             </div>
 
@@ -1331,9 +1254,7 @@ function App() {
               placeholder="Example: A-106"
             />
 
-            <label>
-              Resident Name
-            </label>
+            <label>Resident Name</label>
 
             <input
               value={user?.name || ""}
@@ -1352,9 +1273,7 @@ function App() {
               }
             >
               <option>Plumbing</option>
-              <option>
-                Electricity
-              </option>
+              <option>Electricity</option>
               <option>Cleaning</option>
               <option>Security</option>
               <option>Other</option>
@@ -1419,3 +1338,4 @@ function App() {
 }
 
 export default App;
+
